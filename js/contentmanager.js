@@ -408,6 +408,9 @@ else if(sel_action_val=="categs"){
 src_space_name='';
 dest_space_name='';
 $("#catShow").show();
+document.getElementById("cat_place").style.display="inline";
+$("#cat_place").show();
+$("#del_place").css("margin-top", "110px");
 $("#dwnFrom").hide();
 $("#del_place").hide();
 $("#dwn_from_space").hide();
