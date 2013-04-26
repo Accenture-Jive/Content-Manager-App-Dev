@@ -655,15 +655,15 @@ var cat_place = document.getElementById("cat_place");
 var cat_sel_place = cat_place.options[cat_place.selectedIndex].value;
 
 if(cat_sel_place=="select_space"){
-toSpaceRequest();
+fromSpaceRequest();
 document.getElementById("copyTo").style.visibility="hidden";
 }
 else if(cat_sel_place=="select_group"){
-toGroupRequest();
+fromGroupRequest();
 document.getElementById("copyTo").style.visibility="hidden";
 }
 else if(cat_sel_place=="select_project"){
-toProjectRequest();
+fromProjectRequest();
 document.getElementById("copyTo").style.visibility="hidden";
 }
 else if(cat_sel_place=="select_one"){
