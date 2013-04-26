@@ -29,12 +29,10 @@ var sel_action_val='';
 var msg2='Please select a place.';
 
 //Code for category test
- $(function(){
-      $('#cattest').click(function(){
-       alert("Category test");
-        });
-      });
-    });
+ 
+ function catagoryTest() {
+	alert("hi");
+ }
 
 function showLoading() 
 {
