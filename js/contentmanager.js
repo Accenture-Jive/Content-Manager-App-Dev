@@ -93,6 +93,7 @@ if(sel_action_val=="copy"){
 
 src_space_name='';
 dest_space_name='';
+$("#cat_place").hide();
 $("#cmdu").text("Copy");
 $("#to_space").hide();
 $("#tab_items").show();
@@ -151,6 +152,7 @@ document.getElementById("to_place").disabled = true;
 src_space_name='';
 dest_space_name='';
 $("#cmdu").text("Move");
+$("#cat_place").hide();
 $("#dwn_from_space").hide();
 $("#dwn_from_group").hide();
 $("#dwn_from_project").hide();
@@ -205,6 +207,7 @@ $('#start_copying_button').unbind('click').click(function(){startMoving();});
 else if(sel_action_val=="delete"){
 src_space_name='';
 dest_space_name='';
+$("#cat_place").hide();
 $("#dwn_from_space").hide();
 $("#dwn_from_group").hide();
 $("#dwn_from_project").hide();
@@ -256,6 +259,7 @@ if(browserName=="MSIE")
 src_space_name='';
 dest_space_name='';
 $("#cmdu").text("Upload");
+$("#cat_place").hide();
 $("#dwn_from_space").hide();
 $("#dwn_from_group").hide();
 $("#dwn_from_project").hide();
@@ -316,6 +320,7 @@ else
 src_space_name='';
 dest_space_name='';
 $("#dwn_from_space").hide();
+$("#cat_place").hide();
 $("#dwn_from_group").hide();
 $("#dwn_from_project").hide();
 $("#dwn_place").hide();
@@ -362,6 +367,7 @@ src_space_name='';
 dest_space_name='';
 $("#cmdu").text("Download");
 $("#tab_items").hide();
+$("#cat_place").hide();
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#change_selection_div").hide();
@@ -491,6 +497,8 @@ $("#showDiv").hide();
 $("#copyTo").hide();
 $("#delShow").hide();
 $("#del_place").hide();
+$("#catShow").hide();
+$("#tagShow").hide();
 $("#upShow").hide();
 $("#up_place").hide();
 $('#select_items_button').hide();
