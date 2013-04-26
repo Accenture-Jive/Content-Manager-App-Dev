@@ -732,6 +732,23 @@ document.getElementById("copyTo").style.visibility="hidden";
 }
 }
 
+function getCats()
+{
+// get the categories available in the selected space/group/project
+var groups_list=[];
+//length of the categories list
+var list_len=0;
+for(i=0;i<list_len;i++)
+{
+groups_list.push(response.list[i].title);
+document.getElementById('groups-list').options[i] =new Option(response.list[i].title,response.list[i].title);
+}	
+}
+
+function categSel()
+{
+//put the selected category to further use
+}
 function fromSpaceRequest() {
 // Handles user request to select the SPACE and then handle the response to fetch details about the selected SPACE.
 

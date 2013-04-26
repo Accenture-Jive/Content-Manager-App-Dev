@@ -216,12 +216,20 @@ style="display:none;margin-left:-80px;position:absolute; margin-top:110px;">
 </tr>
 <td>
 <br/>
-<select name="cat_place" id="cat_place" onchange="javascript:catFromPlace();" 
+<select name="cat_place" id="cat_place" onchange="javascript:catFromPlace();javascript:getCats();" 
 style="display:none;margin-left:-80px;position:absolute; margin-top:110px;">
 <option value="select_one">Select Place</option>
 <option value="select_space">Select Space</option>
 <option value="select_group">Select Group</option>
 <option value="select_project">Select Project</option>
+</select> 
+</td>
+</tr>
+<tr>
+<td>
+<br/>
+<select name="cat_sel" id="cat_sel" onchange="javascript:categSel();" 
+style="display:none;margin-left:-80px;position:absolute; margin-top:110px;">
 </select> 
 </td>
 </tr>
