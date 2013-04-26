@@ -414,6 +414,7 @@ else if(sel_action_val=="categs"){
 src_space_name='';
 dest_space_name='';
 $("#catShow").show();
+$("#deleteTo").hide();
 document.getElementById("cat_place").style.display="inline";
 $("#cat_place").show();
 $("#del_place").css("margin-top", "110px");
