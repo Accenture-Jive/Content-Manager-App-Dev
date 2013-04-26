@@ -640,6 +640,31 @@ document.getElementById("copyTo").style.visibility="hidden";
 }
 }
 
+function catFromPlace()
+{
+// Identifies which space/group/project user has chosen to edit categories into and calls the appropriate method.
+var cat_place = document.getElementById("cat_place");
+var cat_sel_place = cat_place.options[cat_place.selectedIndex].value;
+
+if(cat_sel_place=="select_space"){
+toSpaceRequest();
+document.getElementById("copyTo").style.visibility="hidden";
+}
+else if(cat_sel_place=="select_group"){
+toGroupRequest();
+document.getElementById("copyTo").style.visibility="hidden";
+}
+else if(cat_sel_place=="select_project"){
+toProjectRequest();
+document.getElementById("copyTo").style.visibility="hidden";
+}
+else if(cat_sel_place=="select_one"){
+document.getElementById("start_copying_button").style.visibility="hidden";	
+$("#button_div").hide();
+document.getElementById("copyTo").style.visibility="hidden";
+}
+}
+
 function toPlace()
 {
 // Identifies which space/group/project the user  has chosen to copy/move the selected content and calls the relevant method.
