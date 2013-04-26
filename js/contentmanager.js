@@ -400,6 +400,7 @@ src_space_name='';
 dest_space_name='';
 $("#cmdu").text("Download");
 $("#dwn_place").show();
+$("#del_place").hide();
 $("#tab_items").hide();
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
