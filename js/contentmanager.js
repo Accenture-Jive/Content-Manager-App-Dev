@@ -508,6 +508,13 @@ dest_space_name='';
 
 document.getElementById("del_place").style.display="inline";
 $("#change_selection_div").hide();
+$("#cat_place").hide();
+$("#catFrom").hide();
+$("#cat_from_space").hide();
+$("#cat_from_group").hide();
+$("#cat_from_project").hide();
+$("#catTo").hide();
+$("#cat_select_items_button").hide();
 $("#dwn_from_space").hide();
 $("#dwn_select_items_button").hide();
 $("#dwn_from_group").hide();
