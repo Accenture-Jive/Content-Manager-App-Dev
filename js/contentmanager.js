@@ -417,6 +417,7 @@ $("#catShow").show();
 $("#deleteTo").hide();
 document.getElementById("cat_place").style.display="inline";
 $("#cat_place").show();
+$("#catFrom").show();
 $("#del_place").css("margin-top", "110px");
 $("#dwnFrom").hide();
 $("#del_place").hide();
