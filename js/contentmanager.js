@@ -94,6 +94,7 @@ if(sel_action_val=="copy"){
 src_space_name='';
 dest_space_name='';
 $("#cat_place").hide();
+$("#cat_sel").hide();
 $("#catFrom").hide();
 $("#cat_from_space").hide();
 $("#cat_from_group").hide();
@@ -159,6 +160,7 @@ src_space_name='';
 dest_space_name='';
 $("#cmdu").text("Move");
 $("#cat_place").hide();
+$("#cat_sel").hide();
 $("#catFrom").hide();
 $("#cat_from_space").hide();
 $("#cat_from_group").hide();
@@ -221,6 +223,7 @@ src_space_name='';
 dest_space_name='';
 $("#cat_place").hide();
 $("#catFrom").hide();
+$("#cat_sel").hide();
 $("#cat_from_space").hide();
 $("#cat_from_group").hide();
 $("#cat_from_project").hide();
@@ -278,6 +281,7 @@ src_space_name='';
 dest_space_name='';
 $("#cmdu").text("Upload");
 $("#cat_place").hide();
+$("#cat_sel").hide();
 $("#catFrom").hide();
 $("#cat_from_space").hide();
 $("#cat_from_group").hide();
@@ -345,6 +349,7 @@ src_space_name='';
 dest_space_name='';
 $("#dwn_from_space").hide();
 $("#cat_place").hide();
+$("#cat_sel").hide();
 $("#catFrom").hide();
 $("#cat_from_space").hide();
 $("#cat_from_group").hide();
@@ -397,6 +402,7 @@ src_space_name='';
 dest_space_name='';
 $("#cmdu").text("Download");
 $("#tab_items").hide();
+$("#cat_sel").hide();
 $("#cat_place").hide();
 $("#catFrom").hide();
 $("#cat_from_space").hide();
@@ -735,14 +741,14 @@ document.getElementById("copyTo").style.visibility="hidden";
 function getCats()
 {
 // get the categories available in the selected space/group/project
-var groups_list=[];
+/*var groups_list=[];
 //length of the categories list
 var list_len=0;
 for(i=0;i<list_len;i++)
 {
 groups_list.push(response.list[i].title);
 document.getElementById('groups-list').options[i] =new Option(response.list[i].title,response.list[i].title);
-}	
+}*/	
 }
 
 function categSel()
@@ -925,9 +931,11 @@ $("#dwnTo").hide();
 $("#upTo").hide();
 document.getElementById("dwn_select_items_button").style.display="inline";
 document.getElementById("cat_select_items_button").style.display="inline";
+document.getElementById("cat_sel").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 $("#dwn_select_items_button").hide();
 $("#cat_select_items_button").show();
+$("#cat_sel").show();
 $("#up_select_items_button").hide();
 $("#change_selection_div").hide();
 $("#dwnShow").hide();
@@ -1159,9 +1167,11 @@ $("#dwnTo").hide();
 $("#upTo").hide();
 document.getElementById("dwn_select_items_button").style.display="inline";
 document.getElementById("cat_select_items_button").style.display="inline";
+document.getElementById("cat_sel").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 $("#dwn_select_items_button").hide();
 $("#cat_select_items_button").show();
+$("#cat_sel").show();
 $("#up_select_items_button").hide();
 $("#change_selection_div").hide();
 $("#dwnShow").hide();
@@ -1393,9 +1403,11 @@ $("#dwnTo").hide();
 $("#upTo").hide();
 document.getElementById("dwn_select_items_button").style.display="inline";
 document.getElementById("cat_select_items_button").style.display="inline";
+document.getElementById("cat_sel").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 $("#dwn_select_items_button").hide();
 $("#cat_select_items_button").show();
+$("#cat_sel").show();
 $("#up_select_items_button").hide();
 $("#change_selection_div").hide();
 $("#dwnShow").hide();
