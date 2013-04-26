@@ -31,7 +31,13 @@ var msg2='Please select a place.';
 //Code for category test
  
  function catagoryTest() {
-	alert("hi");
+	osapi.jive.corev3.groups.get({
+	uri: '/places/43417'
+	}).execute(onPlaceFetchBlog);
+ }
+ 
+ function onPlaceFetchBlog(response){
+	alert(JSON.stringify(response);
  }
 
 function showLoading() 
