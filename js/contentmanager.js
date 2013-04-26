@@ -421,7 +421,7 @@ $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#change_selection_div").hide();
 $("#showDiv").hide();
-document.getElementById("del_place").style.display="inline";
+//document.getElementById("del_place").style.display="inline";
 document.getElementById("del_select_items_button").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 document.getElementById("up_place").style.display="inline";
