@@ -867,7 +867,7 @@ $('#selected_items').css("margin-top", "80px");
 $("#catTo").text("Categorize this:").append('<br/>');
 document.getElementById("catTo").style.display="inline";
 $("#catTo").show();
-$("#dwnTo").show();
+$("#dwnTo").hide();
 $("#upTo").hide();
 document.getElementById("dwn_select_items_button").style.display="inline";
 document.getElementById("cat_select_items_button").style.display="inline";
@@ -1023,6 +1023,18 @@ $('#dwn_place option:[text="' + $(this).text() + '"]').attr('selected', true);
 }
 });
 
+//changing the default dropdown value to 'Change Place'
+$("#cat_place option").each(function() {
+if($(this).text() == 'Select Place') {
+$(this).attr('selected', 'selected'); 
+$('#cat_place :selected').text('Change Place');	
+}
+else if($(this).text() == 'Change Place')
+{  
+$('#cat_place option:[text="' + $(this).text() + '"]').attr('selected', true);  
+}
+});
+
 // calling methods to fetch content from the selected group.
 getDocs(space_url);
 getFiles(space_url);
@@ -1080,6 +1092,37 @@ $("#dwn_place").css("margin-top", "135px");
 $("#dwn_from_group").show();
 $("#dwn_from_space").hide();
 $("#dwn_from_project").hide();
+}
+else if(sel_action_val=="categs")
+{
+// actions when the user choses to download files.
+$('#all_selected_items').css("margin-top", "80px");
+$('#selected_items').css("margin-top", "80px");
+$("#catTo").text("Categorize this:").append('<br/>');
+document.getElementById("catTo").style.display="inline";
+$("#catTo").show();
+$("#dwnTo").hide();
+$("#upTo").hide();
+document.getElementById("dwn_select_items_button").style.display="inline";
+document.getElementById("cat_select_items_button").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+$("#dwn_select_items_button").hide();
+$("#cat_select_items_button").show();
+$("#up_select_items_button").hide();
+$("#change_selection_div").hide();
+$("#dwnShow").hide();
+$("#catShow").show();
+$("#upShow").hide();
+$("#up_place").hide();
+document.getElementById("dwn_place").style.display="inline";
+document.getElementById("cat_place").style.display="inline";
+$("#dwn_place").hide();
+$("#cat_place").show();
+document.getElementById("cat_from_group").innerHTML='<span id="myId" style="text-decoration:underline;">Group</span>'+': '+from_place_name;
+$("#cat_place").css("margin-top", "135px");
+$("#cat_from_space").hide();
+$("#cat_from_group").show();
+$("#cat_from_project").hide();
 }
 else if(sel_action_val=="select_action")
 {
@@ -1212,6 +1255,18 @@ $('#dwn_place option:[text="' + $(this).text() + '"]').attr('selected', true);
 }
 });
 
+//changing the default dropdown value to 'Change Place'
+$("#cat_place option").each(function() {
+if($(this).text() == 'Select Place') {
+$(this).attr('selected', 'selected'); 
+$('#cat_place :selected').text('Change Place');	
+}
+else if($(this).text() == 'Change Place')
+{  
+$('#cat_place option:[text="' + $(this).text() + '"]').attr('selected', true);  
+}
+});
+
 // calling the methods to fetch content from selected project.
 getDocs(space_url);
 getFiles(space_url);
@@ -1271,6 +1326,37 @@ $("#dwn_place").css("margin-top", "135px");
 $("#dwn_from_group").hide();
 $("#dwn_from_space").hide();
 $("#dwn_from_project").show();
+}
+else if(sel_action_val=="categs")
+{
+// actions when the user choses to download files.
+$('#all_selected_items').css("margin-top", "80px");
+$('#selected_items').css("margin-top", "80px");
+$("#catTo").text("Categorize this:").append('<br/>');
+document.getElementById("catTo").style.display="inline";
+$("#catTo").show();
+$("#dwnTo").hide();
+$("#upTo").hide();
+document.getElementById("dwn_select_items_button").style.display="inline";
+document.getElementById("cat_select_items_button").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+$("#dwn_select_items_button").hide();
+$("#cat_select_items_button").show();
+$("#up_select_items_button").hide();
+$("#change_selection_div").hide();
+$("#dwnShow").hide();
+$("#catShow").show();
+$("#upShow").hide();
+$("#up_place").hide();
+document.getElementById("dwn_place").style.display="inline";
+document.getElementById("cat_place").style.display="inline";
+$("#dwn_place").hide();
+$("#cat_place").show();
+document.getElementById("cat_from_project").innerHTML='<span id="myId" style="text-decoration:underline;">Project</span>'+': '+from_place_name;
+$("#cat_place").css("margin-top", "135px");
+$("#cat_from_space").hide();
+$("#cat_from_group").hide();
+$("#cat_from_project").show();
 }
 else if(sel_action_val=="select_action")
 {
