@@ -39,6 +39,13 @@ var msg2='Please select a place.';
  function onPlaceFetchBlog(response){
 	alert(JSON.stringify(response));
 	alert(response.resources.categories.ref);
+	response.getCategories().execute(catFetch);
+	
+ }
+ 
+ function catFetch(response) {
+ 
+ alert(JSON.stringify(response));
  }
 
 function showLoading() 
