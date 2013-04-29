@@ -794,6 +794,15 @@ function categSel()
 {
 //put the selected category to further use
 selected_cat=document.getElementById('cat_sel').value;
+alert(selected_cat);
+
+if (selected_cat=="val1")
+{
+$("#cat_select_items_button").hide();
+$("#catTo").hide();
+}
+else
+{
 $("#cat_select_items_button").show();
 $("#catTo").show();
 getDocs(space_url);
@@ -802,6 +811,8 @@ getDiscussions(space_url);
 getIdeas(space_url);
 getPolls(space_url);
 getBlogs(blog_url);
+}
+
 }
 function fromSpaceRequest() {
 // Handles user request to select the SPACE and then handle the response to fetch details about the selected SPACE.
