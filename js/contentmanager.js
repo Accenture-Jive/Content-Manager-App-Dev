@@ -2074,13 +2074,20 @@ blog_row='<table id="blogTable" border="0" class="jiveBorder" jive-data-cell="{&
 else
 {	
 // action when the selected space/group/project has blogs.
-
+if (sel_action_val=='categs')
+{
+var header='Category';
+}
+else
+{
+var header='Author';
+}
 // adding the header for blogs table.
 blog_row='<table id="blogTable" border="0" class="jiveBorder" jive-data-cell="{&quot;color&quot;:&quot;#575757&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" jive-data-header="{&quot;color&quot;:&quot;#FFFFFF&quot;,&quot;backgroundColor&quot;:&quot;#6690BC&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" style="border: 1px solid #000000; width: 450px;">'+
 '<tr>'+
 '<td style="border:1px solid black;border: 1px solid #000000;width: 60px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: right;" valign="middle"><strong>'+'All<input type="checkbox" id="sel_all_blogs"  onclick="javascript:checkedAll(this.id);">'+'</strong></th>'+
 '<td style="border:1px solid black;border: 1px solid #000000;width: 450px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; Title</strong></th>'+
-'<td style="border:1px solid black;border: 1px solid #000000;width: 160px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; Author</strong></th>'+
+'<td style="border:1px solid black;border: 1px solid #000000;width: 160px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; '+header+'</strong></th>'+
 '</tr>';
 
 $.each(blogs, function(index, group) {
@@ -2088,7 +2095,8 @@ postBlogs = {
 title : "",
 author : "",
 updated : "",
-fileUrl : ""
+fileUrl : "",
+category:""
 }
 
 // assigning values from received response to the variables.
@@ -2096,13 +2104,25 @@ postBlogs.title = group.subject;
 postBlogs.author = group.author.name.formatted;
 postBlogs.updated = group.updated;
 postBlogs.fileUrl = group.resources.self.ref;
+postBlogs.category = group.categories;
 
 // adding each blog in a row as per the received response.
+if (sel_action_val=='categs')
+{
+blog_row = blog_row + '<tr>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="blog_cb" class="blog_cb" onclick="javascript:checkUncheck(this.name);" value="'+postBlogs.fileUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postBlogs.title+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postBlogs.categories+'</td>'+
+'</tr>';	
+}
+else
+{
 blog_row = blog_row + '<tr>'+
 '<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="blog_cb" class="blog_cb" onclick="javascript:checkUncheck(this.name);" value="'+postBlogs.fileUrl+'">'+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postBlogs.title+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postBlogs.author+'</td>'+
 '</tr>';	
+}
 });
 }
 blog_row=blog_row+'</table>';	
@@ -2134,12 +2154,21 @@ docs_row='<table id="docsTable" border="0" class="jiveBorder" jive-data-cell="{&
 }
 else
 {	
+if (sel_action_val=='categs')
+{
+var header='Category';
+}
+else
+{
+var header='Author';
+}
+
 docs_row='<table id="docsTable" border="0" class="jiveBorder" jive-data-cell="{&quot;color&quot;:&quot;#575757&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" jive-data-header="{&quot;color&quot;:&quot;#FFFFFF&quot;,&quot;backgroundColor&quot;:&quot;#6690BC&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" style="border: 1px solid #000000; width: 450px;">'+
 
 '<tr>'+
 '<td style="border:1px solid black;border: 1px solid #000000;width: 60px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: right;" valign="middle"><strong>'+'All<input type="checkbox" id="sel_all_docs" onclick="javascript:checkedAll(this.id);">'+'</strong></th>'+
 '<td style="border:1px solid black;border: 1px solid #000000;width: 450px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; Title</strong></th>'+
-'<td style="border:1px solid black;border: 1px solid #000000;width: 160px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; Author</strong></th>'+
+'<td style="border:1px solid black;border: 1px solid #000000;width: 160px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; '+header+'</strong></th>'+
 '</tr>';
 
 $.each(documents, function(index, group) {
@@ -2147,19 +2176,34 @@ postDoc = {
 title : "",
 author : "",
 updated : "",
-docUrl : ""
+docUrl : "",
+category: ""
 }
 
 postDoc.title = group.subject;
 postDoc.author = group.author.name.formatted;
 postDoc.updated = group.updated;
 postDoc.docUrl = group.resources.self.ref;
+postDoc.category = group.categories;
 
+if (sel_action_val=='categs')
+{
+docs_row = docs_row + '<tr>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="doc_cb" class="doc_cb" onclick="javascript:checkUncheck(this.name);" value="'+postDoc.docUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDoc.title+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDoc.category+'</td>'+
+'</tr>';
+}
+else
+{
 docs_row = docs_row + '<tr>'+
 '<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="doc_cb" class="doc_cb" onclick="javascript:checkUncheck(this.name);" value="'+postDoc.docUrl+'">'+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDoc.title+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDoc.author+'</td>'+
 '</tr>';
+}
+
+
 
 });	
 }	
@@ -2187,12 +2231,21 @@ disc_row='<table id="discTable" border="0" class="jiveBorder" jive-data-cell="{&
 }
 else
 {
+if (sel_action_val=='categs')
+{
+var header='Category';
+}
+else
+{
+var header='Author';
+}
+
 disc_row='<table id="discTable" border="0" class="jiveBorder" jive-data-cell="{&quot;color&quot;:&quot;#575757&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" jive-data-header="{&quot;color&quot;:&quot;#FFFFFF&quot;,&quot;backgroundColor&quot;:&quot;#6690BC&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" style="border: 1px solid #000000; width: 450px;">'+
 
 '<tr>'+
 '<td style="border:1px solid black;border: 1px solid #000000;width: 60px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: right;" valign="middle"><strong>'+'All<input type="checkbox" id="sel_all_disc"  onclick="javascript:checkedAll(this.id);">'+'</strong></th>'+
 '<td style="border:1px solid black;border: 1px solid #000000;width: 450px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; Title</strong></th>'+
-'<td style="border:1px solid black;border: 1px solid #000000;width: 160px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; Author</strong></th>'+
+'<td style="border:1px solid black;border: 1px solid #000000;width: 160px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; '+header+'</strong></th>'+
 '</tr>';
 
 $.each(disc, function(index, group) {
@@ -2200,19 +2253,34 @@ postDisc = {
 title : "",
 author : "",
 updated : "",
-discUrl : ""
+discUrl : "",
+category : ""
 }
 
 postDisc.title = group.subject;
 postDisc.author = group.author.name.formatted;
 postDisc.updated = group.updated;
 postDisc.discUrl = group.resources.self.ref;
+postDisc.category = group.categories;
 
+if (sel_action_val=='categs')
+{
+disc_row = disc_row + '<tr>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="disc_cb" class="disc_cb" onclick="javascript:checkUncheck(this.name);" value="'+postDisc.discUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDisc.title+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDisc.category+'</td>'+
+'</tr>';
+}
+else
+{
 disc_row = disc_row + '<tr>'+
 '<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="disc_cb" class="disc_cb" onclick="javascript:checkUncheck(this.name);" value="'+postDisc.discUrl+'">'+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDisc.title+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDisc.author+'</td>'+
-'</tr>';	
+'</tr>';
+}
+
+	
 });
 }
 disc_row=disc_row+'</table>';	
@@ -2241,11 +2309,20 @@ idea_row='<table id="ideaTable" border="0" class="jiveBorder" jive-data-cell="{&
 }
 else
 {
+if (sel_action_val=='categs')
+{
+var header='Category';
+}
+else
+{
+var header='Author';
+}
+
 idea_row='<table id="ideaTable" border="0" class="jiveBorder" jive-data-cell="{&quot;color&quot;:&quot;#575757&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" jive-data-header="{&quot;color&quot;:&quot;#FFFFFF&quot;,&quot;backgroundColor&quot;:&quot;#6690BC&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" style="border: 1px solid #000000; width: 450px;">'+
 '<tr>'+
 '<td style="border:1px solid black;border: 1px solid #000000;width: 60px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: right;" valign="middle"><strong>'+'All<input type="checkbox" id="sel_all_ideas"  onclick="javascript:checkedAll(this.id);">'+'</strong></th>'+
 '<td style="border:1px solid black;border: 1px solid #000000;width: 450px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; Title</strong></th>'+
-'<td style="border:1px solid black;border: 1px solid #000000;width: 160px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; Author</strong></th>'+
+'<td style="border:1px solid black;border: 1px solid #000000;width: 160px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; '+header+'</strong></th>'+
 '</tr>';
 
 $.each(idea, function(index, group) {
@@ -2253,19 +2330,34 @@ postIdea = {
 title : "",
 author : "",
 updated : "",
-ideaUrl : ""
+ideaUrl : "",
+category: ""
 }
 
 postIdea.title = group.subject;
 postIdea.author = group.author.name.formatted;
 postIdea.updated = group.updated;
 postIdea.ideaUrl = group.resources.self.ref;
+postIdea.category = group.categories;
 
+if (sel_action_val=='categs')
+{
+idea_row = idea_row + '<tr>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="idea_cb" class="idea_cb" onclick="javascript:checkUncheck(this.name);" value="'+postIdea.ideaUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postIdea.title+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postIdea.category+'</td>'+
+'</tr>';
+}
+else
+{
 idea_row = idea_row + '<tr>'+
 '<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="idea_cb" class="idea_cb" onclick="javascript:checkUncheck(this.name);" value="'+postIdea.ideaUrl+'">'+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postIdea.title+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postIdea.author+'</td>'+
-'</tr>';	
+'</tr>';
+}
+
+	
 });
 }
 idea_row=idea_row+'</table>';	
@@ -2292,12 +2384,21 @@ poll_row='<table id="pollTable" border="0" class="jiveBorder" jive-data-cell="{&
 }
 else
 {	
+if (sel_action_val=='categs')
+{
+var header='Category';
+}
+else
+{
+var header='Author';
+}
+
 poll_row='<table id="pollTable" border="0" class="jiveBorder" jive-data-cell="{&quot;color&quot;:&quot;#575757&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" jive-data-header="{&quot;color&quot;:&quot;#FFFFFF&quot;,&quot;backgroundColor&quot;:&quot;#6690BC&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" style="border: 1px solid #000000; width: 450px;">'+
 
 '<tr>'+
 '<td style="border:1px solid black;border: 1px solid #000000;width: 60px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: right;" valign="middle"><strong>'+'All<input type="checkbox" id="sel_all_polls"  onclick="javascript:checkedAll(this.id);">'+'</strong></th>'+
 '<td style="border:1px solid black;border: 1px solid #000000;width: 450px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; Title</strong></th>'+
-'<td style="border:1px solid black;border: 1px solid #000000;width: 160px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; Author</strong></th>'+
+'<td style="border:1px solid black;border: 1px solid #000000;width: 160px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; '+header+'</strong></th>'+
 '</tr>';
 
 $.each(polls, function(index, group) {
@@ -2305,19 +2406,33 @@ postPolls = {
 title : "",
 author : "",
 updated : "",
-fileUrl : ""
+fileUrl : "",
+category: ""
 }
 
 postPolls.title = group.subject;
 postPolls.author = group.author.name.formatted;
 postPolls.updated = group.updated;
 postPolls.fileUrl = group.resources.self.ref;
+postPolls.category = group.categories;
 
+if (sel_action_val=='categs')
+{
+poll_row = poll_row + '<tr>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="poll_cb" class="poll_cb" onclick="javascript:checkUncheck(this.name);" value="'+postPolls.fileUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postPolls.title+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postPolls.category+'</td>'+
+'</tr>';
+}
+else
+{
 poll_row = poll_row + '<tr>'+
 '<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="poll_cb" class="poll_cb" onclick="javascript:checkUncheck(this.name);" value="'+postPolls.fileUrl+'">'+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postPolls.title+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postPolls.author+'</td>'+
 '</tr>';
+}
+
 });
 }
 poll_row=poll_row+'</table>';	
