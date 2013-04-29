@@ -2059,7 +2059,7 @@ if (categg1[ind]==selected_cat)
 console.log("categg1="+categg1);
 console.log("selected_cat="+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
-document.getElementById("file_cb"+index).checked=true;
+$("file_cb"+index).prop('checked', true);
 }
 }
 }
