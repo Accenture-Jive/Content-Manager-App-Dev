@@ -765,7 +765,7 @@ function catFetch(response) {
 var myGroups = [];
 var groups_list=[];
 
-console.log(JSON.stringify(response));
+//console.log(JSON.stringify(response));
 
 $(response.list).each(function(index, group) {
   myGroups.push(group);
