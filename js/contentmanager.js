@@ -769,9 +769,8 @@ var groups_list=[];
 var list_len=response.list.length;
 for(i=0;i<list_len;i++)
 {
-console.log(response.list[i].name);
+//console.log(response.list[i].name);
 groups_list.push(response.list[i].name);
-
 document.getElementById('cat_sel').options[i] =new Option(response.list[i].name,response.list[i].name);
 }
 }
