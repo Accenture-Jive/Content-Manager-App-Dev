@@ -465,6 +465,7 @@ src_space_name='';
 dest_space_name='';
 $("#catShow").show();
 $("#deleteTo").hide();
+$("#cat_select_items_button").hide();
 document.getElementById("cat_place").style.display="inline";
 $("#cat_place").show();
 $("#catFrom").show();
@@ -793,6 +794,13 @@ function categSel()
 {
 //put the selected category to further use
 selected_cat=document.getElementById('cat_sel').value;
+$("#cat_select_items_button").show();
+getDocs(space_url);
+getFiles(space_url);
+getDiscussions(space_url);
+getIdeas(space_url);
+getPolls(space_url);
+getBlogs(blog_url);
 }
 function fromSpaceRequest() {
 // Handles user request to select the SPACE and then handle the response to fetch details about the selected SPACE.
@@ -973,7 +981,7 @@ document.getElementById("cat_select_items_button").style.display="inline";
 document.getElementById("cat_sel").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 $("#dwn_select_items_button").hide();
-$("#cat_select_items_button").show();
+$("#cat_select_items_button").hide();
 $("#cat_sel").show();
 $("#selCat").show();
 $("#up_select_items_button").hide();
@@ -1211,7 +1219,7 @@ document.getElementById("cat_select_items_button").style.display="inline";
 document.getElementById("cat_sel").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 $("#dwn_select_items_button").hide();
-$("#cat_select_items_button").show();
+$("#cat_select_items_button").hide();
 $("#cat_sel").show();
 $("#selCat").show();
 $("#up_select_items_button").hide();
@@ -1449,7 +1457,7 @@ document.getElementById("cat_select_items_button").style.display="inline";
 document.getElementById("cat_sel").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 $("#dwn_select_items_button").hide();
-$("#cat_select_items_button").show();
+$("#cat_select_items_button").hide();
 $("#cat_sel").show();
 $("#selCat").show();
 $("#up_select_items_button").hide();
@@ -2025,7 +2033,6 @@ postFiles.category = group.categories;
 // adding each file in a row as per the received response.
 if (sel_action_val=='categs')
 {
-alert(selected_cat);
 files_row = files_row + '<tr>'+
 '<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+postFiles.fileUrl+'">'+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.title+'</td>'+
