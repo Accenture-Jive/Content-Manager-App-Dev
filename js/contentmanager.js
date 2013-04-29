@@ -782,6 +782,8 @@ $.each(myOptions, function(val, text) {
         $('<option></option>').val(val).html(text)
     );
 });
+
+$('select option[value="val1"]').attr("selected",true);
 }
 
 function categSel()
