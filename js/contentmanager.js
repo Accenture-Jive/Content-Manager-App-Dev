@@ -2060,7 +2060,7 @@ fields : '@all',
 count : 50,
 place : blog_url
 }).execute(function(response) {
-console.log("Blogs: "+JSON.stringify(response));
+//console.log("Blogs: "+JSON.stringify(response));
 
 var blogs = response.list;
 var postBlogs;
@@ -2105,6 +2105,7 @@ postBlogs.author = group.author.name.formatted;
 postBlogs.updated = group.updated;
 postBlogs.fileUrl = group.resources.self.ref;
 postBlogs.category = group.categories;
+alert(postBlogs.category);
 
 // adding each blog in a row as per the received response.
 if (sel_action_val=='categs')
