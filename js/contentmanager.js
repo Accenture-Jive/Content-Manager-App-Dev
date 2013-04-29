@@ -794,7 +794,6 @@ function categSel()
 {
 //put the selected category to further use
 selected_cat=document.getElementById('cat_sel').value;
-alert(selected_cat);
 
 if (selected_cat=="val1")
 {
