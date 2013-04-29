@@ -2060,7 +2060,7 @@ fields : '@all',
 count : 50,
 place : blog_url
 }).execute(function(response) {
-//console.log("Blogs: "+JSON.stringify(response));
+console.log("Blogs: "+JSON.stringify(response));
 
 var blogs = response.list;
 var postBlogs;
