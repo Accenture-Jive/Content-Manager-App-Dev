@@ -30,15 +30,15 @@ var msg2='Please select a place.';
 
 //Code for category test
  
- function catagoryTest() {
+ function categoryTest() {
 	osapi.jive.corev3.groups.get({
-	uri: '/places/43417'
+	uri: space_url
 	}).execute(onPlaceFetchBlog);
  }
  
  function onPlaceFetchBlog(response){
 	alert(JSON.stringify(response));
-	alert(response.resources.categories.ref);
+	//alert(response.resources.categories.ref);
 	response.getCategories().execute(catFetch);
 	
  }
@@ -980,6 +980,7 @@ $("#cat_place").css("margin-top", "135px");
 $("#cat_from_space").show();
 $("#cat_from_group").hide();
 $("#cat_from_project").hide();
+categoryTest();
 }
 else if(sel_action_val=="select_action")
 {
