@@ -1218,6 +1218,7 @@ $("#cat_place").css("margin-top", "135px");
 $("#cat_from_space").hide();
 $("#cat_from_group").show();
 $("#cat_from_project").hide();
+categoryTest();
 }
 else if(sel_action_val=="select_action")
 {
