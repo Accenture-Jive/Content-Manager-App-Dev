@@ -766,16 +766,19 @@ var myGroups = [];
 var groups_list=[];
 
 //console.log(JSON.stringify(response));
-
-$(response.list).each(function(index, group) {
-  myGroups.push(group);
+/*
+$(response.list).each(function(index, catteg) {
+  myGroups.push(catteg);
 });
+*/
 var list_len=response.list.length;
+alert(list_len);
 for(i=0;i<list_len;i++)
 {
-groups_list.push(response.list[i].title);
-console.log(groups_list);
-document.getElementById('cat_sel').options[i] =new Option(response.list[i].title,response.list[i].title);
+console.log(response.list[i].name);
+groups_list.push(response.list[i].name);
+
+document.getElementById('cat_sel').options[i] =new Option(response.list[i].name,response.list[i].name);
 }
 }
 
