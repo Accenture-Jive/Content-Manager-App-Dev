@@ -2105,7 +2105,6 @@ postBlogs.author = group.author.name.formatted;
 postBlogs.updated = group.updated;
 postBlogs.fileUrl = group.resources.self.ref;
 postBlogs.category = group.categories;
-alert(postBlogs.category);
 
 // adding each blog in a row as per the received response.
 if (sel_action_val=='categs')
@@ -2113,7 +2112,7 @@ if (sel_action_val=='categs')
 blog_row = blog_row + '<tr>'+
 '<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="blog_cb" class="blog_cb" onclick="javascript:checkUncheck(this.name);" value="'+postBlogs.fileUrl+'">'+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postBlogs.title+'</td>'+
-'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postBlogs.categories+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postBlogs.category+'</td>'+
 '</tr>';	
 }
 else
@@ -2133,7 +2132,6 @@ document.getElementById("blog_div").innerHTML=blog_row;
 
 });
 };
-
 
 function getDocs(space_url)
 {
