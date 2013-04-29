@@ -85,6 +85,7 @@ function selected_action()
 // hide show elements accordingly.
 var sel_action = document.getElementById("src_place");
 sel_action_val = sel_action.options[sel_action.selectedIndex].value;
+alert(sel_action_val);
 
 var dialog_obj3 = $("#uploadIE");
 dialog_obj3.dialog("close");
@@ -2013,7 +2014,6 @@ postFiles.author = group.author.name.formatted;
 postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
-alert(postFiles.category);
 
 // adding each file in a row as per the received response.
 files_row = files_row + '<tr>'+
