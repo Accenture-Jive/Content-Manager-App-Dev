@@ -774,7 +774,7 @@ var list_len=response.list.length;
 for(i=0;i<list_len;i++)
 {
 groups_list.push(response.list[i].title);
-console.log(groups_list[]);
+console.log(groups_list);
 document.getElementById('cat_sel').options[i] =new Option(response.list[i].title,response.list[i].title);
 }
 }
