@@ -2003,7 +2003,8 @@ postFiles = {
 title : "",
 author : "",
 updated : "",
-fileUrl : ""
+fileUrl : "",
+category: ""
 }
 
 // assigning values from the received response to the variables.
@@ -2011,6 +2012,8 @@ postFiles.title = group.subject;
 postFiles.author = group.author.name.formatted;
 postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
+postFiles.category = group.categories;
+alert(category);
 
 // adding each file in a row as per the received response.
 files_row = files_row + '<tr>'+
