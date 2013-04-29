@@ -28,6 +28,8 @@ var finalJSON = '';
 var sel_action_val='';
 var msg2='Please select a place.';
 
+var selected_cat='';
+
 function showLoading() 
 {
 $("#maskLoad").mask("Please Wait...");
@@ -790,8 +792,6 @@ $('select option[value="val1"]').attr("selected",true);
 function categSel()
 {
 //put the selected category to further use
-var selected_cat='';
-
 selected_cat=document.getElementById('cat_sel').value;
 }
 function fromSpaceRequest() {
@@ -2025,6 +2025,7 @@ postFiles.category = group.categories;
 // adding each file in a row as per the received response.
 if (sel_action_val=='categs')
 {
+alert(selected_cat);
 files_row = files_row + '<tr>'+
 '<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+postFiles.fileUrl+'">'+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.title+'</td>'+
