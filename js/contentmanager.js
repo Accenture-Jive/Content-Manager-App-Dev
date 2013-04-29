@@ -773,7 +773,15 @@ groups_list.push(response.list[i].name);
 document.getElementById('cat_sel').options[i] =new Option(response.list[i].name,response.list[i].name);
 }
 
-$("#cat_sel").prepend("<option value='Select Category'></option>").val("Select Category");
+var myOptions = {
+    val1 : 'Select Category'
+};
+var mySelect = $('#cat_sel');
+$.each(myOptions, function(val, text) {
+    mySelect.prepend(
+        $('<option></option>').val(val).html(text)
+    );
+});
 }
 
 function categSel()
