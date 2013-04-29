@@ -777,7 +777,7 @@ document.getElementById('cat_sel').options[i] =new Option(response.list[i].name,
 var mySelect = $('#cat_sel');
 $.each(myOptions, function(default_value, text) {
     mySelect.append(
-        $('<option></option>').val(default_value).html(text);
+        $('<option></option>').val(default_value).html(text)
     );
 });
 }
