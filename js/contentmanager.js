@@ -773,15 +773,7 @@ groups_list.push(response.list[i].name);
 document.getElementById('cat_sel').options[i] =new Option(response.list[i].name,response.list[i].name);
 }
 
-var myOptions = {
-    val1 : 'Select Category'
-};
-var mySelect = $('#cat_sel');
-$.each(myOptions, function(val, text) {
-    mySelect.append(
-        $('<option></option>').val(val).html(text)
-    );
-});
+$("#cat_sel").prepend("<option value='' selected='selected'></option>");
 }
 
 function categSel()
