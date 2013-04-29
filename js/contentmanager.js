@@ -28,25 +28,6 @@ var finalJSON = '';
 var sel_action_val='';
 var msg2='Please select a place.';
 
-//Code for category test
-
-function categoryTest() {
-osapi.jive.corev3.groups.get({
-uri: space_url
-}).execute(onPlaceFetchBlog);
-}
-
-function onPlaceFetchBlog(response){
-console.log(JSON.stringify(response));
-//alert(response.resources.categories.ref);
-response.getCategories().execute(catFetch);
-
-}
-
-function catFetch(response) {
-console.log(JSON.stringify(response));
-}
-
 function showLoading() 
 {
 $("#maskLoad").mask("Please Wait...");
@@ -765,17 +746,37 @@ document.getElementById("copyTo").style.visibility="hidden";
 }
 }
 
-function getCats()
-{
-// get the categories available in the selected space/group/project
-/*var groups_list=[];
-//length of the categories list
-var list_len=0;
+//Code for category test
+
+function categoryTest() {
+osapi.jive.corev3.groups.get({
+uri: space_url
+}).execute(onPlaceFetchBlog);
+}
+
+function onPlaceFetchBlog(response){
+//console.log(JSON.stringify(response));
+//alert(response.resources.categories.ref);
+response.getCategories().execute(catFetch);
+
+}
+
+function catFetch(response) {
+var myGroups = [];
+var groups_list=[];
+
+console.log(JSON.stringify(response));
+
+$(response.list).each(function(index, group) {
+  myGroups.push(group);
+});
+var list_len=response.list.length;
 for(i=0;i<list_len;i++)
 {
 groups_list.push(response.list[i].title);
-document.getElementById('groups-list').options[i] =new Option(response.list[i].title,response.list[i].title);
-}*/	
+console.log(groups_list[]);
+document.getElementById('cat_sel').options[i] =new Option(response.list[i].title,response.list[i].title);
+}
 }
 
 function categSel()
