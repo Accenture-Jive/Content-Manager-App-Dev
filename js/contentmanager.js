@@ -85,7 +85,6 @@ function selected_action()
 // hide show elements accordingly.
 var sel_action = document.getElementById("src_place");
 sel_action_val = sel_action.options[sel_action.selectedIndex].value;
-alert(sel_action_val);
 
 var dialog_obj3 = $("#uploadIE");
 dialog_obj3.dialog("close");
@@ -1988,6 +1987,14 @@ files_row='<table id="filesTable" border="0" class="jiveBorder" jive-data-cell="
 else
 {
 // action when the selected space/group/project has files.
+if (sel_action_val=='categs')
+{
+var header='Category';
+}
+else
+{
+var header='Author';
+}
 
 // creates table header row.
 files_row='<table id="filesTable" border="0" class="jiveBorder" jive-data-cell="{&quot;color&quot;:&quot;#575757&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" jive-data-header="{&quot;color&quot;:&quot;#FFFFFF&quot;,&quot;backgroundColor&quot;:&quot;#6690BC&quot;,&quot;textAlign&quot;:&quot;left&quot;,&quot;padding&quot;:&quot;2&quot;,&quot;fontFamily&quot;:&quot;arial,helvetica,sans-serif&quot;,&quot;verticalAlign&quot;:&quot;baseline&quot;}" style="border: 1px solid #000000; width: 450px;">'+
@@ -1995,7 +2002,7 @@ files_row='<table id="filesTable" border="0" class="jiveBorder" jive-data-cell="
 '<tr>'+
 '<td style="border:1px ;border: 1px solid #000000;width: 60px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: right;" valign="middle"><strong>'+'All<input type="checkbox" id="sel_all_files"  onclick="javascript:checkedAll(this.id);">'+'</strong></td>'+
 '<td style="border:1px ;border: 1px solid #000000;width: 450px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; Title</strong></td>'+
-'<td style="border:1px solid ;border: 1px solid #000000;width: 160px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; Author</strong></td>'+
+'<td style="border:1px solid ;border: 1px solid #000000;width: 160px;padding: 2px;color: #ffffff;background-color: #6690bc;text-align: left;" valign="middle"><strong>&nbsp; '+header+'</strong></td>'+
 '</tr>';
 
 
@@ -2016,11 +2023,23 @@ postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
 
 // adding each file in a row as per the received response.
+if (sel_action_val=='categs')
+{
+files_row = files_row + '<tr>'+
+'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+postFiles.fileUrl+'">'+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.title+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.category+'</td>'+
+'</tr>';
+}
+else
+{
 files_row = files_row + '<tr>'+
 '<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+postFiles.fileUrl+'">'+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.title+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.author+'</td>'+
-'</tr>';		
+'</tr>';
+}
+		
 });
 }
 files_row=files_row+'</table>';	
