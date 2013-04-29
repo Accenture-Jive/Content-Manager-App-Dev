@@ -766,13 +766,7 @@ var myGroups = [];
 var groups_list=[];
 
 //console.log(JSON.stringify(response));
-/*
-$(response.list).each(function(index, catteg) {
-  myGroups.push(catteg);
-});
-*/
 var list_len=response.list.length;
-alert(list_len);
 for(i=0;i<list_len;i++)
 {
 console.log(response.list[i].name);
