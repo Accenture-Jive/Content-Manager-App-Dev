@@ -777,7 +777,10 @@ document.getElementById('cat_sel').options[i] =new Option(response.list[i].name,
 function categSel()
 {
 //put the selected category to further use
+var selected_cat='';
 
+selected_cat=document.getElementById('cat_sel').value;
+alert(selected_cat);
 }
 function fromSpaceRequest() {
 // Handles user request to select the SPACE and then handle the response to fetch details about the selected SPACE.
