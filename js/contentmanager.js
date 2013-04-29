@@ -763,7 +763,6 @@ response.getCategories().execute(catFetch);
 
 function catFetch(response) {
 var groups_list=[];
-var default_value='Select Category';
 
 //console.log(JSON.stringify(response));
 var list_len=response.list.length;
@@ -774,10 +773,13 @@ groups_list.push(response.list[i].name);
 document.getElementById('cat_sel').options[i] =new Option(response.list[i].name,response.list[i].name);
 }
 
+var myOptions = {
+    val1 : 'Select Category'
+};
 var mySelect = $('#cat_sel');
-$.each(myOptions, function(default_value, text) {
+$.each(myOptions, function(val, text) {
     mySelect.append(
-        $('<option></option>').val(default_value).html(text)
+        $('<option></option>').val(val).html(text)
     );
 });
 }
