@@ -762,7 +762,6 @@ response.getCategories().execute(catFetch);
 }
 
 function catFetch(response) {
-var myGroups = [];
 var groups_list=[];
 
 //console.log(JSON.stringify(response));
@@ -771,6 +770,7 @@ for(i=0;i<list_len;i++)
 {
 //console.log(response.list[i].name);
 groups_list.push(response.list[i].name);
+document.getElementById('cat_sel').options[i] =new Option('Select Category','Select Category');
 document.getElementById('cat_sel').options[i] =new Option(response.list[i].name,response.list[i].name);
 }
 }
@@ -778,6 +778,7 @@ document.getElementById('cat_sel').options[i] =new Option(response.list[i].name,
 function categSel()
 {
 //put the selected category to further use
+
 }
 function fromSpaceRequest() {
 // Handles user request to select the SPACE and then handle the response to fetch details about the selected SPACE.
