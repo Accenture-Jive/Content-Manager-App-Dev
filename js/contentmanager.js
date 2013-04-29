@@ -1971,7 +1971,7 @@ fields : '@all',
 count : 50,
 place : space_url
 }).execute(function(response) {
-console.log("Files: "+JSON.stringify(response));
+//console.log("Files: "+JSON.stringify(response));
 
 var files = response.list;
 var postFiles;
@@ -2013,7 +2013,7 @@ postFiles.author = group.author.name.formatted;
 postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
-alert(category);
+alert(postFiles.category);
 
 // adding each file in a row as per the received response.
 files_row = files_row + '<tr>'+
