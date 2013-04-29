@@ -762,10 +762,11 @@ response.getCategories().execute(catFetch);
 }
 
 function catFetch(response) {
+// capture the categories in the space/group/project and then populate the same in a dropdown.
 var groups_list=[];
 
 //console.log(JSON.stringify(response));
-var list_len=response.list.length;
+/*var list_len=response.list.length;
 for(i=0;i<list_len;i++)
 {
 //console.log(response.list[i].name);
@@ -783,7 +784,7 @@ $.each(myOptions, function(val, text) {
     );
 });
 
-$('select option[value="val1"]').attr("selected",true);
+$('select option[value="val1"]').attr("selected",true);*/
 }
 
 function categSel()
