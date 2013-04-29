@@ -2056,8 +2056,6 @@ for(var ind=0;ind<categg1.length;ind++)
 {
 if (categg1[ind]==selected_cat)
 {document.getElementById("file_cb"+index).checked=true;}
-else
-{document.getElementById("file_cb"+index).checked=false;}
 }
 }
 else
