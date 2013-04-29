@@ -2056,7 +2056,7 @@ for(var ind=0;ind<categg1.length;ind++)
 {
 if (categg1[ind]==selected_cat)
 {
-alert(document.getElementById("file_cb"+index).value;);
+alert(document.getElementById("file_cb"+index).value);
 document.getElementById("file_cb"+index).checked=true;
 }
 }
