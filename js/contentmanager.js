@@ -2045,8 +2045,7 @@ postFiles.category = group.categories;
 if (sel_action_val=='categs')
 {
 var categg1=postFiles.category;
-var result = categg1.split(',');
-alert(result);
+alert(categg1);
 files_row = files_row + '<tr>'+
 '<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+postFiles.fileUrl+'">'+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.title+'</td>'+
