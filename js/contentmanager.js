@@ -2060,7 +2060,10 @@ console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
 var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
-document.getElementById(temp_id).checked = true;
+alert(document.getElementById("file_cb0").checked);
+document.getElementById("file_cb0").checked = true;
+document.getElementById("file_cb1").checked = true;
+document.getElementById("file_cb3").checked = true;
 }
 }
 }
