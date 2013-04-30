@@ -50,8 +50,6 @@ console.log(data);
 function onPageLoad() 
 {
 
-document.getElementById("test1").checked = true;
-
 // Detect the browser for adding different code when using IE.
 navigator.sayswho= (function(){    
 var N= navigator.appName, ua= navigator.userAgent, tem;
