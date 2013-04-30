@@ -2056,10 +2056,12 @@ for(var ind=0;ind<categg1.length;ind++)
 {
 if (categg1[ind]==selected_cat)
 {
-console.log("categg1="+categg1);
-console.log("selected_cat="+selected_cat);
+console.log("categg1= "+categg1);
+console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
-$("file_cb"+index).prop('checked', true);
+var temp_id="file_cb"+index;
+console.log("temp_id= "+temp_id);
+$('.'+temp_id+'').prop('checked', true);
 }
 }
 }
