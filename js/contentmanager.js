@@ -51,6 +51,7 @@ function onPageLoad()
 {
 
 $('.test1').prop('checked', true);
+$('.testname').prop('checked', true);
 alert(document.getElementById("test1").value);
 // Detect the browser for adding different code when using IE.
 navigator.sayswho= (function(){    
