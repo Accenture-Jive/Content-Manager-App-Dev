@@ -2061,7 +2061,8 @@ console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
 var temp_id="#file_cb"+index;
 console.log("temp_id= "+temp_id);
-$(temp_id).attr('checked', this.checked);
+$("#filecb0").attr('checked', this.checked);
+$("#filecb1").attr('checked', this.checked);
 }
 }
 }
