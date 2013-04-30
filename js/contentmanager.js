@@ -49,12 +49,6 @@ console.log(data);
 
 function onPageLoad() 
 {
-
-//alert($('.testname').prop('checked', true));
-//var testval=$('#test1').is(':checked');
-//if (testval=false)
-document.getElementById("test1").checked = true;
-
 // Detect the browser for adding different code when using IE.
 navigator.sayswho= (function(){    
 var N= navigator.appName, ua= navigator.userAgent, tem;
@@ -2064,8 +2058,9 @@ if (categg1[ind]==selected_cat)
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
-var temp_id="#file_cb"+index;
+var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
+document.getElementById(temp_id).checked = true;
 }
 }
 }
