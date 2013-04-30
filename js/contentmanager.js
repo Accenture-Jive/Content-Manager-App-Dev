@@ -2059,9 +2059,9 @@ if (categg1[ind]==selected_cat)
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
-var temp_id="#"+"file_cb"+index;
+var temp_id="#file_cb"+index;
 console.log("temp_id= "+temp_id);
-$('"'+temp_id+'"').attr('checked', this.checked);
+$(temp_id).attr('checked', this.checked);
 }
 }
 }
