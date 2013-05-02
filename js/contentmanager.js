@@ -1,5 +1,4 @@
 var addId=new Array();
-var arrayIndex=0;
 var browserName='';
 var loggedUser='';
 var loggedUserName='';
@@ -2044,6 +2043,7 @@ postFiles.category = group.categories;
 // adding each file in a row as per the received response.
 if (sel_action_val=='categs')
 {
+var arrayIndex=0;
 var categg1=postFiles.category;
 
 files_row = files_row + '<tr>'+
