@@ -2055,6 +2055,9 @@ for(var ind=0;ind<categg1.length;ind++)
 {
 if (categg1[ind]==selected_cat)
 {
+console.log("ind= "+ind);
+console.log("index= "+index);
+
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
