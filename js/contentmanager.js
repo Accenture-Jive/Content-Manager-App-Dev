@@ -1,4 +1,5 @@
 var addId=new Array();
+var arrayIndex=0;
 var browserName='';
 var loggedUser='';
 var loggedUserName='';
@@ -2053,10 +2054,8 @@ files_row = files_row + '<tr>'+
 
 for(var ind=0;ind<categg1.length;ind++)
 {
-
 if (categg1[ind]==selected_cat)
 {
-var arrayIndex=0;
 console.log("ind= "+ind);
 console.log("index= "+index);
 console.log("categg1= "+categg1);
@@ -2066,9 +2065,9 @@ var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("i val: "+addId[arrayIndex]);
+}
+}
 arrayIndex++;
-}
-}
 }
 else
 {
