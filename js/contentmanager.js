@@ -2066,8 +2066,9 @@ var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("i val: "+addId[arrayIndex]);
-arrayIndex++;
+
 }
+arrayIndex++;
 }
 }
 else
