@@ -2057,16 +2057,13 @@ for(var ind=0;ind<categg1.length;ind++)
 {
 if (categg1[ind]==selected_cat)
 {
-console.log("ind= "+ind);
-console.log("index= "+index);
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
 var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
-console.log("arrayIndex: "+arrayIndex);
 addId[arrayIndex]=temp_id;
-console.log("i val: "+addId[arrayIndex]);
+console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
 }
 }
@@ -2645,14 +2642,15 @@ $(this).removeClass('borderadd');
 }
 
 function showTab(){
-alert("array Len: "+addId.length);
+
+// actions when user choses to select content he wants to copy/move/delete/download.
+//checking of checkboxes
+console.log("array Len: "+addId.length);
  for (var i=0; i<addId.length; i++) {
- alert("value: "+addId[i]);
+ console.log("value: "+addId[i]);
  document.getElementById(addId[i]).checked = true;
  }
-// actions when user choses to select content he wants to copy/move/delete/download.
-console.log("A in showtab: "+document.getElementById("file_cb0").checked);
-console.log("A in showtab: "+document.getElementById("file_cb1").checked);
+//end checking of checkboxes
 $("#stylized").hide();
 $("#selection_menu").show();
 
