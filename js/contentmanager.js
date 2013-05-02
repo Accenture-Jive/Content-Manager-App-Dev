@@ -2628,6 +2628,9 @@ function highlightTab()
 {
 console.log("in highlightTab: "+document.getElementById("file0").checked);
 console.log("in highlightTab: "+document.getElementById("file1").checked);
+  document.getElementById("file0").checked=true
+document.getElementById("file2").checked = true;
+document.getElementById("file3").checked = true;
 // highlight the tab on which the user clicks by adding a blue border and underline.
 $("#docs_tab").addClass("borderadd");
 $("#disc_tab").addClass("borderadd");
@@ -2650,6 +2653,9 @@ function showTab(){
 // actions when user choses to select content he wants to copy/move/delete/download.
 console.log("in showtab: "+document.getElementById("file0").checked);
 console.log("in showtab: "+document.getElementById("file1").checked);
+  document.getElementById("file0").checked=true
+document.getElementById("file2").checked = true;
+document.getElementById("file3").checked = true;
 $("#stylized").hide();
 $("#selection_menu").show();
 
