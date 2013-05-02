@@ -2642,6 +2642,10 @@ function showTab(){
 alert(addId[1]);
 alert(addId[2]);
 alert(addId[3]);
+
+ for (var i=0; i<addId.length; i++) {
+ alert("value: "+addId[i]);
+ }
 // actions when user choses to select content he wants to copy/move/delete/download.
 document.getElementById("file_cb0").checked=true
 document.getElementById("file_cb2").checked = true;
