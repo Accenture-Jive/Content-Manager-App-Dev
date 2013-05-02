@@ -2063,9 +2063,11 @@ console.log("temp_id= "+temp_id);
 console.log("is true: "+document.getElementById("file0").checked);
 console.log("hello");
 
-  document.getElementById("file1").checked=true
+  document.getElementById("file0").checked=true
 document.getElementById("file2").checked = true;
 document.getElementById("file3").checked = true;
+console.log("is true: "+document.getElementById("file0").checked);
+console.log("is true: "+document.getElementById("file1").checked);
 }
 }
 }
