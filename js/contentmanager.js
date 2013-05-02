@@ -49,7 +49,11 @@ console.log(data);
 
 function onPageLoad() 
 {
+<<<<<<< HEAD
 
+=======
+//alert("loading");
+>>>>>>> 18c3f535762ecc042d9f9569debf3a67afaccab0
 // Detect the browser for adding different code when using IE.
 navigator.sayswho= (function(){    
 var N= navigator.appName, ua= navigator.userAgent, tem;
