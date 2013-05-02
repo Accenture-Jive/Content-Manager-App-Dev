@@ -2626,6 +2626,8 @@ $(mcb_id).removeAttr("checked");
 
 function highlightTab()
 {
+console.log("in highlightTab: "+document.getElementById("file0").checked);
+console.log("in highlightTab: "+document.getElementById("file1").checked);
 // highlight the tab on which the user clicks by adding a blue border and underline.
 $("#docs_tab").addClass("borderadd");
 $("#disc_tab").addClass("borderadd");
@@ -2646,7 +2648,8 @@ $(this).removeClass('borderadd');
 
 function showTab(){
 // actions when user choses to select content he wants to copy/move/delete/download.
-
+console.log("in showtab: "+document.getElementById("file0").checked);
+console.log("in showtab: "+document.getElementById("file1").checked);
 $("#stylized").hide();
 $("#selection_menu").show();
 
