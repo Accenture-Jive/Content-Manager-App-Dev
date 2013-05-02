@@ -1,4 +1,5 @@
 var addId=new Array();
+var arrayIndex=0;
 var browserName='';
 var loggedUser='';
 var loggedUserName='';
@@ -792,6 +793,7 @@ $('select option[value="val1"]').attr("selected",true);
 
 function categSel()
 {
+arrayIndex=0;
 //put the selected category to further use
 selected_cat=document.getElementById('cat_sel').value;
 
@@ -2043,7 +2045,6 @@ postFiles.category = group.categories;
 // adding each file in a row as per the received response.
 if (sel_action_val=='categs')
 {
-var arrayIndex=0;
 var categg1=postFiles.category;
 
 files_row = files_row + '<tr>'+
