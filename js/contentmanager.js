@@ -2060,7 +2060,7 @@ console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file"+index).value);
 var temp_id="file"+index;
 console.log("temp_id= "+temp_id);
-alert($('#file0').attr('checked', 'checked'));
+alert("is true: "+$('#file0').attr('checked', 'checked'));
   document.getElementById("file1").checked=true
 document.getElementById("file2").checked = true;
 document.getElementById("file3").checked = true;
