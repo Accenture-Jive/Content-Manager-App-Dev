@@ -2057,14 +2057,15 @@ if (categg1[ind]==selected_cat)
 {
 console.log("ind= "+ind);
 console.log("index= "+index);
-
+var i=0;
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
 var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
-addId[index]=temp_id;
-console.log("i val: "+addId[index]);
+addId[i]=temp_id;
+console.log("i val: "+addId[i]);
+i++;
 }
 }
 }
