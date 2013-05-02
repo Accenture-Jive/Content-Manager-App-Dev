@@ -2046,7 +2046,7 @@ if (sel_action_val=='categs')
 var categg1=postFiles.category;
 
 files_row = files_row + '<tr>'+
-'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+postFiles.fileUrl+'">'+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+postFiles.fileUrl+'">'+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.title+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.category+'</td>'+
 '</tr>';
@@ -2057,13 +2057,13 @@ if (categg1[ind]==selected_cat)
 {
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
-console.log(document.getElementById("file_cb"+index).value);
+console.log(document.getElementById("file"+index).value);
 var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
-alert(document.getElementById("file_cb0").checked);
-document.getElementById("file_cb0").checked = true;
-document.getElementById("file_cb1").checked = true;
-document.getElementById("file_cb3").checked = true;
+alert(document.getElementById("file0").checked);
+document.getElementById("file0").checked = true;
+document.getElementById("file1").checked = true;
+document.getElementById("file3").checked = true;
 }
 }
 }
