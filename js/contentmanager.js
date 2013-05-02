@@ -1,3 +1,4 @@
+var all='';
 var browserName='';
 var loggedUser='';
 var loggedUserName='';
@@ -2059,10 +2060,8 @@ console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
 var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
-alert(document.getElementById("file_cb0").checked);
-document.getElementById("file_cb0").checked = true;
-document.getElementById("file_cb1").checked = true;
-document.getElementById("file_cb3").checked = true;
+all = new Array();
+all[i]=temp_id;
 }
 }
 }
@@ -2640,10 +2639,11 @@ $(this).removeClass('borderadd');
 }
 
 function showTab(){
+alert(all[1]);
+alert(all[2]);
+alert(all[3]);
 // actions when user choses to select content he wants to copy/move/delete/download.
-console.log("B in showtab: "+document.getElementById("file_cb0").checked);
-console.log("B in showtab: "+document.getElementById("file_cb1").checked);
-  document.getElementById("file_cb0").checked=true
+document.getElementById("file_cb0").checked=true
 document.getElementById("file_cb2").checked = true;
 document.getElementById("file_cb3").checked = true;
 console.log("A in showtab: "+document.getElementById("file_cb0").checked);
