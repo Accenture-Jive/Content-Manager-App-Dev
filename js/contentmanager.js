@@ -2032,7 +2032,6 @@ updated : "",
 fileUrl : "",
 category: ""
 }
-alert("index: "+index);
 // assigning values from the received response to the variables.
 postFiles.title = group.subject;
 postFiles.author = group.author.name.formatted;
@@ -2046,7 +2045,7 @@ if (sel_action_val=='categs')
 var categg1=postFiles.category;
 
 files_row = files_row + '<tr>'+
-'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file'+index+'" name="file_cb" class="file_cb"  value="'+postFiles.fileUrl+'">'+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+postFiles.fileUrl+'">'+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.title+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.category+'</td>'+
 '</tr>';
@@ -2057,17 +2056,13 @@ if (categg1[ind]==selected_cat)
 {
 console.log("categg1= "+categg1);
 console.log("selected_cat= "+selected_cat);
-console.log(document.getElementById("file"+index).value);
-var temp_id="file"+index;
+console.log(document.getElementById("file_cb"+index).value);
+var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
-console.log("is true: "+document.getElementById("file0").checked);
-console.log("hello");
-
-  document.getElementById("file0").checked=true
-document.getElementById("file2").checked = true;
-document.getElementById("file3").checked = true;
-console.log("is true: "+document.getElementById("file0").checked);
-console.log("is true: "+document.getElementById("file1").checked);
+alert(document.getElementById("file_cb0").checked);
+document.getElementById("file_cb0").checked = true;
+document.getElementById("file_cb1").checked = true;
+document.getElementById("file_cb3").checked = true;
 }
 }
 }
@@ -2626,11 +2621,6 @@ $(mcb_id).removeAttr("checked");
 
 function highlightTab()
 {
-console.log("in highlightTab: "+document.getElementById("file0").checked);
-console.log("in highlightTab: "+document.getElementById("file1").checked);
-  document.getElementById("file0").checked=true
-document.getElementById("file2").checked = true;
-document.getElementById("file3").checked = true;
 // highlight the tab on which the user clicks by adding a blue border and underline.
 $("#docs_tab").addClass("borderadd");
 $("#disc_tab").addClass("borderadd");
@@ -2651,11 +2641,13 @@ $(this).removeClass('borderadd');
 
 function showTab(){
 // actions when user choses to select content he wants to copy/move/delete/download.
-console.log("in showtab: "+document.getElementById("file0").checked);
-console.log("in showtab: "+document.getElementById("file1").checked);
-  document.getElementById("file0").checked=true
-document.getElementById("file2").checked = true;
-document.getElementById("file3").checked = true;
+console.log("B in showtab: "+document.getElementById("file_cb0").checked);
+console.log("B in showtab: "+document.getElementById("file_cb1").checked);
+  document.getElementById("file_cb0").checked=true
+document.getElementById("file_cb2").checked = true;
+document.getElementById("file_cb3").checked = true;
+console.log("A in showtab: "+document.getElementById("file_cb0").checked);
+console.log("A in showtab: "+document.getElementById("file_cb1").checked);
 $("#stylized").hide();
 $("#selection_menu").show();
 
