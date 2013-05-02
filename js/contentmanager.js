@@ -2061,7 +2061,7 @@ console.log(document.getElementById("file_cb"+index).value);
 var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[i]=temp_id;
-console.log("i val: "+addId[i]);
+console.log("i val: "+addId[ind]);
 }
 }
 }
