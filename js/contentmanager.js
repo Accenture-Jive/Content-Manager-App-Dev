@@ -2639,6 +2639,7 @@ $(this).removeClass('borderadd');
 }
 
 function showTab(){
+alert("array Len: "+addId.length);
  for (var i=0; i<addId.length; i++) {
  alert("value: "+addId[i]);
  }
