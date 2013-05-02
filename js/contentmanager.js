@@ -2642,11 +2642,9 @@ function showTab(){
 alert("array Len: "+addId.length);
  for (var i=0; i<addId.length; i++) {
  alert("value: "+addId[i]);
+ document.getElementById(addId[i]).checked = true;
  }
 // actions when user choses to select content he wants to copy/move/delete/download.
-document.getElementById("file_cb0").checked=true
-document.getElementById("file_cb2").checked = true;
-document.getElementById("file_cb3").checked = true;
 console.log("A in showtab: "+document.getElementById("file_cb0").checked);
 console.log("A in showtab: "+document.getElementById("file_cb1").checked);
 $("#stylized").hide();
