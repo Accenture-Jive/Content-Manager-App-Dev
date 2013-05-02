@@ -2063,11 +2063,12 @@ console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("file_cb"+index).value);
 var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
+console.log("arrayIndex: "+arrayIndex);
 addId[arrayIndex]=temp_id;
 console.log("i val: "+addId[arrayIndex]);
-}
-}
 arrayIndex++;
+}
+}
 }
 else
 {
