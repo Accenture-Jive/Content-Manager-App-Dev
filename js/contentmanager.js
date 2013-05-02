@@ -2639,10 +2639,6 @@ $(this).removeClass('borderadd');
 }
 
 function showTab(){
-alert(addId[1]);
-alert(addId[2]);
-alert(addId[3]);
-
  for (var i=0; i<addId.length; i++) {
  alert("value: "+addId[i]);
  }
