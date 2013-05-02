@@ -49,7 +49,7 @@ console.log(data);
 
 function onPageLoad() 
 {
-alert("loading");
+
 // Detect the browser for adding different code when using IE.
 navigator.sayswho= (function(){    
 var N= navigator.appName, ua= navigator.userAgent, tem;
@@ -2033,7 +2033,7 @@ updated : "",
 fileUrl : "",
 category: ""
 }
-
+alert("index: "+index);
 // assigning values from the received response to the variables.
 postFiles.title = group.subject;
 postFiles.author = group.author.name.formatted;
