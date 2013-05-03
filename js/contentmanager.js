@@ -2147,10 +2147,28 @@ postBlogs.category = group.categories;
 if (sel_action_val=='categs')
 {
 blog_row = blog_row + '<tr>'+
-'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="blog_cb" class="blog_cb" onclick="javascript:checkUncheck(this.name);" value="'+postBlogs.fileUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" id="blog_cb'+index+'" name="blog_cb" class="blog_cb" onclick="javascript:checkUncheck(this.name);" value="'+postBlogs.fileUrl+'">'+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postBlogs.title+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postBlogs.category+'</td>'+
 '</tr>';	
+
+var categg2=postBlogs.category;
+
+for(var ind=0;ind<categg2.length;ind++)
+{
+if (categg2[ind]==selected_cat)
+{
+console.log("categg2= "+categg2);
+console.log("selected_cat= "+selected_cat);
+console.log(document.getElementById("blog_cb"+index).value);
+var temp_id="blog_cb"+index;
+console.log("temp_id= "+temp_id);
+addId[arrayIndex]=temp_id;
+console.log("Array val: "+addId[arrayIndex]);
+arrayIndex++;
+}
+}
+
 }
 else
 {
@@ -2225,10 +2243,27 @@ postDoc.category = group.categories;
 if (sel_action_val=='categs')
 {
 docs_row = docs_row + '<tr>'+
-'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="doc_cb" class="doc_cb" onclick="javascript:checkUncheck(this.name);" value="'+postDoc.docUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" id="doc_cb'+index+'" name="doc_cb" class="doc_cb" onclick="javascript:checkUncheck(this.name);" value="'+postDoc.docUrl+'">'+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDoc.title+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDoc.category+'</td>'+
 '</tr>';
+
+var categg3=postDoc.category;
+
+for(var ind=0;ind<categg3.length;ind++)
+{
+if (categg3[ind]==selected_cat)
+{
+console.log("categg3= "+categg3);
+console.log("selected_cat= "+selected_cat);
+console.log(document.getElementById("doc_cb"+index).value);
+var temp_id="doc_cb"+index;
+console.log("temp_id= "+temp_id);
+addId[arrayIndex]=temp_id;
+console.log("Array val: "+addId[arrayIndex]);
+arrayIndex++;
+}
+}
 }
 else
 {
@@ -2302,10 +2337,27 @@ postDisc.category = group.categories;
 if (sel_action_val=='categs')
 {
 disc_row = disc_row + '<tr>'+
-'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="disc_cb" class="disc_cb" onclick="javascript:checkUncheck(this.name);" value="'+postDisc.discUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" id="disc_cb'+index+'" name="disc_cb" class="disc_cb" onclick="javascript:checkUncheck(this.name);" value="'+postDisc.discUrl+'">'+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDisc.title+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDisc.category+'</td>'+
 '</tr>';
+
+var categg4=postDisc.category;
+
+for(var ind=0;ind<categg4.length;ind++)
+{
+if (categg4[ind]==selected_cat)
+{
+console.log("categg4= "+categg4);
+console.log("selected_cat= "+selected_cat);
+console.log(document.getElementById("disc_cb"+index).value);
+var temp_id="disc_cb"+index;
+console.log("temp_id= "+temp_id);
+addId[arrayIndex]=temp_id;
+console.log("Array val: "+addId[arrayIndex]);
+arrayIndex++;
+}
+}
 }
 else
 {
@@ -2379,10 +2431,27 @@ postIdea.category = group.categories;
 if (sel_action_val=='categs')
 {
 idea_row = idea_row + '<tr>'+
-'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="idea_cb" class="idea_cb" onclick="javascript:checkUncheck(this.name);" value="'+postIdea.ideaUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" id="idea_cb'+index+'" name="idea_cb" class="idea_cb" onclick="javascript:checkUncheck(this.name);" value="'+postIdea.ideaUrl+'">'+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postIdea.title+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postIdea.category+'</td>'+
 '</tr>';
+
+var categg5=postIdea.category;
+
+for(var ind=0;ind<categg5.length;ind++)
+{
+if (categg5[ind]==selected_cat)
+{
+console.log("categg5= "+categg5);
+console.log("selected_cat= "+selected_cat);
+console.log(document.getElementById("idea_cb"+index).value);
+var temp_id="idea_cb"+index;
+console.log("temp_id= "+temp_id);
+addId[arrayIndex]=temp_id;
+console.log("Array val: "+addId[arrayIndex]);
+arrayIndex++;
+}
+}
 }
 else
 {
@@ -2455,10 +2524,27 @@ postPolls.category = group.categories;
 if (sel_action_val=='categs')
 {
 poll_row = poll_row + '<tr>'+
-'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" name="poll_cb" class="poll_cb" onclick="javascript:checkUncheck(this.name);" value="'+postPolls.fileUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" id="poll_cb'+index+'" name="poll_cb" class="poll_cb" onclick="javascript:checkUncheck(this.name);" value="'+postPolls.fileUrl+'">'+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postPolls.title+'</td>'+
 '<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postPolls.category+'</td>'+
 '</tr>';
+
+var categg6=postPolls.category;
+
+for(var ind=0;ind<categg6.length;ind++)
+{
+if (categg6[ind]==selected_cat)
+{
+console.log("categg6= "+categg6);
+console.log("selected_cat= "+selected_cat);
+console.log(document.getElementById("poll_cb"+index).value);
+var temp_id="poll_cb"+index;
+console.log("temp_id= "+temp_id);
+addId[arrayIndex]=temp_id;
+console.log("Array val: "+addId[arrayIndex]);
+arrayIndex++;
+}
+}
 }
 else
 {
@@ -2644,13 +2730,16 @@ $(this).removeClass('borderadd');
 function showTab(){
 
 // actions when user choses to select content he wants to copy/move/delete/download.
+
 //checking of checkboxes
 console.log("array Len: "+addId.length);
- for (var i=0; i<addId.length; i++) {
+ for (var i=0; i<addId.length; i++) 
+ {
  console.log("value: "+addId[i]);
  document.getElementById(addId[i]).checked = true;
  }
 //end checking of checkboxes
+
 $("#stylized").hide();
 $("#selection_menu").show();
 
