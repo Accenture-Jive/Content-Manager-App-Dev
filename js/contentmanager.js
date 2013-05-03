@@ -471,6 +471,7 @@ document.getElementById("cat_place").style.display="inline";
 $("#cat_place").show();
 $("#catFrom").show();
 $("#del_place").css("margin-top", "110px");
+$('#cat_place').css("margin-top", "120px");
 $("#dwnFrom").hide();
 $("#del_place").hide();
 $("#dwn_from_space").hide();
@@ -982,6 +983,7 @@ $("#dwn_from_project").hide();
 else if(sel_action_val=="categs")
 {
 // actions when the user choses to download files.
+$('#cat_place').css("margin-top", "120px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#catTo").text("Categorize this:").append('<br/>');
@@ -1220,6 +1222,7 @@ $("#dwn_from_project").hide();
 else if(sel_action_val=="categs")
 {
 // actions when the user choses to download files.
+$('#cat_place').css("margin-top", "120px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#catTo").text("Categorize this:").append('<br/>');
