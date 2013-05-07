@@ -1140,7 +1140,7 @@ else if(sel_action_val=="tags")
 $('#tag_place').css("margin-top", "120px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
-$("#tagTo").text("Tag this:").append('<br/>');
+$("#tagTo").text("Assign tag to this content:").append('<br/>');
 document.getElementById("tagTo").style.display="inline";
 $("#tagTo").hide();
 $("#dwnTo").hide();
@@ -1431,7 +1431,7 @@ else if(sel_action_val=="tags")
 $('#tag_place').css("margin-top", "120px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
-$("#tagTo").text("Tag this:").append('<br/>');
+$("#tagTo").text("Assign tag to this content:").append('<br/>');
 document.getElementById("catTo").style.display="inline";
 $("#tagTo").hide();
 $("#dwnTo").hide();
@@ -1713,7 +1713,7 @@ else if(sel_action_val=="tags")
 $('#tag_place').css("margin-top", "120px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
-$("#tagTo").text("Tag this:").append('<br/>');
+$("#tagTo").text("Assign tag to this content:").append('<br/>');
 document.getElementById("tagTo").style.display="inline";
 $("#catTo").hide();
 $("#tagTo").hide();
