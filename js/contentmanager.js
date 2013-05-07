@@ -2298,12 +2298,26 @@ updated : "",
 fileUrl : "",
 category: ""
 }
+
+tagFiles = {
+title : "",
+author : "",
+updated : "",
+fileUrl : "",
+tags: ""
+}
 // assigning values from the received response to the variables.
 postFiles.title = group.subject;
 postFiles.author = group.author.name.formatted;
 postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
+
+tagFiles.title = group.subject;
+tagFiles.author = group.author.name.formatted;
+tagFiles.updated = group.updated;
+tagFiles.fileUrl = group.resources.self.ref;
+tagFiles.tags = group.tags;
 
 // adding each file in a row as per the received response.
 if (sel_action_val=='categs')
@@ -2331,6 +2345,33 @@ arrayIndex++;
 }
 }
 }
+else if (sel_action_val=='tags')
+{
+var tags=postFiles.tags;
+
+files_row = files_row + '<tr>'+
+'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.tags+'</td>'+
+'</tr>';
+
+for(var ind=0;ind<tags.length;ind++)
+{
+if (tags[ind]==selected_tag)
+{
+console.log("tags= "+tags);
+console.log("selected_tag= "+selected_tag);
+console.log(document.getElementById("file_cb"+index).value);
+var temp_id="file_cb"+index;
+console.log("temp_id= "+temp_id);
+addId[arrayIndex]=temp_id;
+console.log("Array val: "+addId[arrayIndex]);
+arrayIndex++;
+}
+}
+}
+
+
 else
 {
 files_row = files_row + '<tr>'+
