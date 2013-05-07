@@ -1287,6 +1287,16 @@ else if($(this).text() == 'Change Place')
 $('#cat_place option:[text="' + $(this).text() + '"]').attr('selected', true);  
 }
 });
+$("#tag_place option").each(function() {
+if($(this).text() == 'Select Place') {
+$(this).attr('selected', 'selected'); 
+$('#tag_place :selected').text('Change Place');	
+}
+else if($(this).text() == 'Change Place')
+{  
+$('#tag_place option:[text="' + $(this).text() + '"]').attr('selected', true);  
+}
+});
 
 // calling methods to fetch content from the selected group.
 getDocs(space_url);
