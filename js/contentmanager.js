@@ -531,7 +531,7 @@ document.getElementById("tag_place").style.display="inline";
 $("#tag_place").show();
 $("#tagFrom").show();
 $("#del_place").css("margin-top", "110px");
-$('#tag_place').css("margin-top", "120px");
+$('#tag_place').css("margin-top", "90px");
 $("#dwnFrom").hide();
 $("#del_place").hide();
 $("#dwn_from_space").hide();
