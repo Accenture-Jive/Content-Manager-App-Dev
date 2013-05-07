@@ -2349,7 +2349,6 @@ else if (sel_action_val=='tags')
 {
 var tags=tagFiles.tags;
 console.log("tags: "+tags);
-alert("tags: "+tags);
 files_row = files_row + '<tr>'+
 '<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
 '<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
@@ -2448,6 +2447,19 @@ postBlogs.updated = group.updated;
 postBlogs.fileUrl = group.resources.self.ref;
 postBlogs.category = group.categories;
 
+tagFiles = {
+title : "",
+author : "",
+updated : "",
+fileUrl : "",
+tags: ""
+}
+tagFiles.title = group.subject;
+tagFiles.author = group.author.name.formatted;
+tagFiles.updated = group.updated;
+tagFiles.fileUrl = group.resources.self.ref;
+tagFiles.tags = group.tags;
+
 // adding each blog in a row as per the received response.
 if (sel_action_val=='categs')
 {
@@ -2473,7 +2485,31 @@ console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
 }
 }
+}
+else if (sel_action_val=='tags')
+{
+var tags=tagFiles.tags;
+console.log("tags: "+tags);
+files_row = files_row + '<tr>'+
+'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.tags+'</td>'+
+'</tr>';
 
+for(var ind=0;ind<tags.length;ind++)
+{
+if (tags[ind]==selected_tag)
+{
+console.log("tags= "+tags);
+console.log("selected_tag= "+selected_tag);
+console.log(document.getElementById("file_cb"+index).value);
+var temp_id="file_cb"+index;
+console.log("temp_id= "+temp_id);
+addId[arrayIndex]=temp_id;
+console.log("Array val: "+addId[arrayIndex]);
+arrayIndex++;
+}
+}
 }
 else
 {
@@ -2545,6 +2581,19 @@ postDoc.updated = group.updated;
 postDoc.docUrl = group.resources.self.ref;
 postDoc.category = group.categories;
 
+tagFiles = {
+title : "",
+author : "",
+updated : "",
+fileUrl : "",
+tags: ""
+}
+tagFiles.title = group.subject;
+tagFiles.author = group.author.name.formatted;
+tagFiles.updated = group.updated;
+tagFiles.fileUrl = group.resources.self.ref;
+tagFiles.tags = group.tags;
+
 if (sel_action_val=='categs')
 {
 docs_row = docs_row + '<tr>'+
@@ -2563,6 +2612,31 @@ console.log("categg3= "+categg3);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("doc_cb"+index).value);
 var temp_id="doc_cb"+index;
+console.log("temp_id= "+temp_id);
+addId[arrayIndex]=temp_id;
+console.log("Array val: "+addId[arrayIndex]);
+arrayIndex++;
+}
+}
+}
+else if (sel_action_val=='tags')
+{
+var tags=tagFiles.tags;
+console.log("tags: "+tags);
+files_row = files_row + '<tr>'+
+'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.tags+'</td>'+
+'</tr>';
+
+for(var ind=0;ind<tags.length;ind++)
+{
+if (tags[ind]==selected_tag)
+{
+console.log("tags= "+tags);
+console.log("selected_tag= "+selected_tag);
+console.log(document.getElementById("file_cb"+index).value);
+var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
@@ -2639,6 +2713,19 @@ postDisc.updated = group.updated;
 postDisc.discUrl = group.resources.self.ref;
 postDisc.category = group.categories;
 
+tagFiles = {
+title : "",
+author : "",
+updated : "",
+fileUrl : "",
+tags: ""
+}
+tagFiles.title = group.subject;
+tagFiles.author = group.author.name.formatted;
+tagFiles.updated = group.updated;
+tagFiles.fileUrl = group.resources.self.ref;
+tagFiles.tags = group.tags;
+
 if (sel_action_val=='categs')
 {
 disc_row = disc_row + '<tr>'+
@@ -2657,6 +2744,31 @@ console.log("categg4= "+categg4);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("disc_cb"+index).value);
 var temp_id="disc_cb"+index;
+console.log("temp_id= "+temp_id);
+addId[arrayIndex]=temp_id;
+console.log("Array val: "+addId[arrayIndex]);
+arrayIndex++;
+}
+}
+}
+else if (sel_action_val=='tags')
+{
+var tags=tagFiles.tags;
+console.log("tags: "+tags);
+files_row = files_row + '<tr>'+
+'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.tags+'</td>'+
+'</tr>';
+
+for(var ind=0;ind<tags.length;ind++)
+{
+if (tags[ind]==selected_tag)
+{
+console.log("tags= "+tags);
+console.log("selected_tag= "+selected_tag);
+console.log(document.getElementById("file_cb"+index).value);
+var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
@@ -2733,6 +2845,19 @@ postIdea.updated = group.updated;
 postIdea.ideaUrl = group.resources.self.ref;
 postIdea.category = group.categories;
 
+tagFiles = {
+title : "",
+author : "",
+updated : "",
+fileUrl : "",
+tags: ""
+}
+tagFiles.title = group.subject;
+tagFiles.author = group.author.name.formatted;
+tagFiles.updated = group.updated;
+tagFiles.fileUrl = group.resources.self.ref;
+tagFiles.tags = group.tags;
+
 if (sel_action_val=='categs')
 {
 idea_row = idea_row + '<tr>'+
@@ -2751,6 +2876,31 @@ console.log("categg5= "+categg5);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("idea_cb"+index).value);
 var temp_id="idea_cb"+index;
+console.log("temp_id= "+temp_id);
+addId[arrayIndex]=temp_id;
+console.log("Array val: "+addId[arrayIndex]);
+arrayIndex++;
+}
+}
+}
+else if (sel_action_val=='tags')
+{
+var tags=tagFiles.tags;
+console.log("tags: "+tags);
+files_row = files_row + '<tr>'+
+'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.tags+'</td>'+
+'</tr>';
+
+for(var ind=0;ind<tags.length;ind++)
+{
+if (tags[ind]==selected_tag)
+{
+console.log("tags= "+tags);
+console.log("selected_tag= "+selected_tag);
+console.log(document.getElementById("file_cb"+index).value);
+var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
@@ -2826,6 +2976,20 @@ postPolls.updated = group.updated;
 postPolls.fileUrl = group.resources.self.ref;
 postPolls.category = group.categories;
 
+
+tagFiles = {
+title : "",
+author : "",
+updated : "",
+fileUrl : "",
+tags: ""
+}
+tagFiles.title = group.subject;
+tagFiles.author = group.author.name.formatted;
+tagFiles.updated = group.updated;
+tagFiles.fileUrl = group.resources.self.ref;
+tagFiles.tags = group.tags;
+
 if (sel_action_val=='categs')
 {
 poll_row = poll_row + '<tr>'+
@@ -2844,6 +3008,31 @@ console.log("categg6= "+categg6);
 console.log("selected_cat= "+selected_cat);
 console.log(document.getElementById("poll_cb"+index).value);
 var temp_id="poll_cb"+index;
+console.log("temp_id= "+temp_id);
+addId[arrayIndex]=temp_id;
+console.log("Array val: "+addId[arrayIndex]);
+arrayIndex++;
+}
+}
+}
+else if (sel_action_val=='tags')
+{
+var tags=tagFiles.tags;
+console.log("tags: "+tags);
+files_row = files_row + '<tr>'+
+'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.tags+'</td>'+
+'</tr>';
+
+for(var ind=0;ind<tags.length;ind++)
+{
+if (tags[ind]==selected_tag)
+{
+console.log("tags= "+tags);
+console.log("selected_tag= "+selected_tag);
+console.log(document.getElementById("file_cb"+index).value);
+var temp_id="file_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
