@@ -532,7 +532,7 @@ document.getElementById("tag_place").style.display="inline";
 $("#tag_place").show();
 $("#tagFrom").show();
 $("#del_place").css("margin-top", "110px");
-$('#tag_place').css("margin-top", "100px");
+$('#tag_place').css("margin-top", "110px");
 $("#dwnFrom").hide();
 $("#del_place").hide();
 $("#dwn_from_space").hide();
