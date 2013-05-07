@@ -519,6 +519,66 @@ $('#select_items_button').hide();
 $('#start_copying_button').val('Start Deleting');
 $('#start_copying_button').unbind('click').click(function(){startDeleting();});
 }
+
+else if(sel_action_val=="tags"){
+src_space_name='';
+dest_space_name='';
+$("#catShow").show();
+$("#deleteTo").hide();
+$("#cat_select_items_button").hide();
+document.getElementById("cat_place").style.display="inline";
+$("#cat_place").show();
+$("#catFrom").show();
+$("#del_place").css("margin-top", "110px");
+$('#cat_place').css("margin-top", "120px");
+$("#dwnFrom").hide();
+$("#del_place").hide();
+$("#dwn_from_space").hide();
+$("#dwn_from_group").hide();
+$("#dwn_from_project").hide();
+$("#dwn_place").hide();
+$("#dwnTo").hide();
+$("#cmdu").text("Delete");
+$("#dwn_select_items_button").hide();
+$("#dwnFrom").hide();
+$("#tab_items").show();
+$('#all_selected_items').css("margin-top", "80px");
+$('#selected_items').css("margin-top", "80px");
+$("#change_selection_div").hide();
+$("#showDiv").hide();
+//document.getElementById("del_place").style.display="inline";
+document.getElementById("del_select_items_button").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+document.getElementById("up_place").style.display="inline";
+$("#del_place").css("margin-top", "110px");
+$("#del_select_items_button").hide();
+$("#up_select_items_button").hide();
+$("#copyTo").hide();
+$("#up_place").hide();
+$("#delShow").hide();
+$("#tagShow").hide();
+$("#upShow").hide();
+$("#upTo").hide();
+$("#del_from_space").hide();
+$("#del_from_group").hide();
+$("#del_from_project").hide();
+$("#up_from_space").hide();
+$("#up_from_group").hide();
+$("#up_from_project").hide();
+document.getElementById("deleteFrom").style.display="inline";
+document.getElementById("upFrom").style.display="inline";
+$('#upFrom').hide();
+$('#from_label').hide();
+$('#to_label').hide();
+$('#to_place').hide();
+$("#to_space").hide();
+$("#to_group").hide();
+$("#to_project").hide();
+$('#select_items_button').hide();	
+$('#start_copying_button').val('Start Deleting');
+$('#start_copying_button').unbind('click').click(function(){startDeleting();});
+}
+
 else if(sel_action_val=="select_action"){
 src_space_name='';
 dest_space_name='';
@@ -816,6 +876,32 @@ getBlogs(blog_url);
 }
 
 }
+
+function tagSel()
+{
+arrayIndex=0;
+//put the selected category to further use
+selected_cat=document.getElementById('tag_sel').value;
+
+if (selected_cat=="val1")
+{
+$("#tag_select_items_button").hide();
+$("#tagTo").hide();
+}
+else
+{
+$("#tag_select_items_button").show();
+$("#tagTo").show();
+getDocs(space_url);
+getFiles(space_url);
+getDiscussions(space_url);
+getIdeas(space_url);
+getPolls(space_url);
+getBlogs(blog_url);
+}
+
+}
+
 function fromSpaceRequest() {
 // Handles user request to select the SPACE and then handle the response to fetch details about the selected SPACE.
 
@@ -1016,6 +1102,44 @@ $("#cat_from_group").hide();
 $("#cat_from_project").hide();
 categoryTest();
 }
+
+else if(sel_action_val=="tags")
+{
+// actions when the user choses to download files.
+$('#cat_place').css("margin-top", "120px");
+$('#all_selected_items').css("margin-top", "80px");
+$('#selected_items').css("margin-top", "80px");
+$("#catTo").text("Categorize this:").append('<br/>');
+document.getElementById("catTo").style.display="inline";
+$("#catTo").hide();
+$("#dwnTo").hide();
+$("#upTo").hide();
+document.getElementById("dwn_select_items_button").style.display="inline";
+document.getElementById("cat_select_items_button").style.display="inline";
+document.getElementById("cat_sel").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+$("#dwn_select_items_button").hide();
+$("#cat_select_items_button").hide();
+$("#cat_sel").show();
+$("#selCat").show();
+$("#up_select_items_button").hide();
+$("#change_selection_div").hide();
+$("#dwnShow").hide();
+$("#catShow").show();
+$("#upShow").hide();
+$("#up_place").hide();
+document.getElementById("dwn_place").style.display="inline";
+document.getElementById("cat_place").style.display="inline";
+$("#dwn_place").hide();
+$("#cat_place").show();
+document.getElementById("cat_from_space").innerHTML='<span id="myId" style="text-decoration:underline;">Space</span>'+': '+from_place_name;
+$("#cat_place").css("margin-top", "150px");
+$("#cat_from_space").show();
+$("#cat_from_group").hide();
+$("#cat_from_project").hide();
+categoryTest();
+}
+
 else if(sel_action_val=="select_action")
 {
 // actions if user changes action to default value.
@@ -1255,6 +1379,45 @@ $("#cat_from_group").show();
 $("#cat_from_project").hide();
 categoryTest();
 }
+
+else if(sel_action_val=="tags")
+{
+// actions when the user choses to download files.
+$('#tag_place').css("margin-top", "120px");
+$('#all_selected_items').css("margin-top", "80px");
+$('#selected_items').css("margin-top", "80px");
+$("#tagTo").text("Tag this:").append('<br/>');
+document.getElementById("catTo").style.display="inline";
+$("#tagTo").hide();
+$("#dwnTo").hide();
+$("#upTo").hide();
+document.getElementById("dwn_select_items_button").style.display="inline";
+document.getElementById("tag_select_items_button").style.display="inline";
+document.getElementById("tag_sel").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+$("#dwn_select_items_button").hide();
+$("#tag_select_items_button").hide();
+$("#tag_sel").show();
+$("#selTag").show();
+$("#up_select_items_button").hide();
+$("#change_selection_div").hide();
+$("#dwnShow").hide();
+$("#catShow").hide();
+$("#tagShow").show();
+$("#upShow").hide();
+$("#up_place").hide();
+document.getElementById("dwn_place").style.display="inline";
+document.getElementById("tag_place").style.display="inline";
+$("#dwn_place").hide();
+$("#tag_place").show();
+document.getElementById("tag_from_group").innerHTML='<span id="myId" style="text-decoration:underline;">Group</span>'+': '+from_place_name;
+$("#tag_place").css("margin-top", "150px");
+$("#tag_from_space").hide();
+$("#tag_from_group").show();
+$("#tag_from_project").hide();
+categoryTest();
+}
+
 else if(sel_action_val=="select_action")
 {
 //action when user changes the action to default value.
@@ -1495,6 +1658,45 @@ $("#cat_from_group").hide();
 $("#cat_from_project").show();
 categoryTest();
 }
+
+else if(sel_action_val=="tags")
+{
+
+// actions when the user choses to download files.
+$('#cat_place').css("margin-top", "120px");
+$('#all_selected_items').css("margin-top", "80px");
+$('#selected_items').css("margin-top", "80px");
+$("#catTo").text("Categorize this:").append('<br/>');
+document.getElementById("catTo").style.display="inline";
+$("#catTo").hide();
+$("#dwnTo").hide();
+$("#upTo").hide();
+document.getElementById("dwn_select_items_button").style.display="inline";
+document.getElementById("cat_select_items_button").style.display="inline";
+document.getElementById("cat_sel").style.display="inline";
+document.getElementById("up_select_items_button").style.display="inline";
+$("#dwn_select_items_button").hide();
+$("#cat_select_items_button").hide();
+$("#cat_sel").show();
+$("#selCat").show();
+$("#up_select_items_button").hide();
+$("#change_selection_div").hide();
+$("#dwnShow").hide();
+$("#catShow").show();
+$("#upShow").hide();
+$("#up_place").hide();
+document.getElementById("dwn_place").style.display="inline";
+document.getElementById("cat_place").style.display="inline";
+$("#dwn_place").hide();
+$("#cat_place").show();
+document.getElementById("cat_from_project").innerHTML='<span id="myId" style="text-decoration:underline;">Project</span>'+': '+from_place_name;
+$("#cat_place").css("margin-top", "150px");
+$("#cat_from_space").hide();
+$("#cat_from_group").hide();
+$("#cat_from_project").show();
+categoryTest();
+}
+
 else if(sel_action_val=="select_action")
 {
 // actions when the user changes the action to default value.
