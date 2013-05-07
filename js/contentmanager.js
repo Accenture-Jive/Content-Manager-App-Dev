@@ -554,6 +554,7 @@ document.getElementById("up_place").style.display="inline";
 $("#del_place").css("margin-top", "110px");
 $("#del_select_items_button").hide();
 $("#up_select_items_button").hide();
+$("#dwn_select_items_button").hide();
 $("#copyTo").hide();
 $("#up_place").hide();
 $("#delShow").hide();
