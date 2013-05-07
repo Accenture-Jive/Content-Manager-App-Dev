@@ -2347,7 +2347,7 @@ arrayIndex++;
 }
 else if (sel_action_val=='tags')
 {
-var tags=postFiles.tags;
+var tags=tagFiles.tags;
 console.log("tags: "+tags);
 alert("tags: "+tags);
 files_row = files_row + '<tr>'+
