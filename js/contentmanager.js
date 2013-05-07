@@ -2275,6 +2275,10 @@ if (sel_action_val=='categs')
 {
 var header='Category';
 }
+else if (sel_action_val=='tags')
+{
+var header='Tags';
+}
 else
 {
 var header='Author';
@@ -2419,6 +2423,10 @@ if (sel_action_val=='categs')
 {
 var header='Category';
 }
+else if (sel_action_val=='tags')
+{
+var header='Tags';
+}
 else
 {
 var header='Author';
@@ -2553,6 +2561,10 @@ if (sel_action_val=='categs')
 {
 var header='Category';
 }
+else if (sel_action_val=='tags')
+{
+var header='Tags';
+}
 else
 {
 var header='Author';
@@ -2684,6 +2696,10 @@ else
 if (sel_action_val=='categs')
 {
 var header='Category';
+}
+else if (sel_action_val=='tags')
+{
+var header='Tags';
 }
 else
 {
@@ -2818,6 +2834,10 @@ if (sel_action_val=='categs')
 {
 var header='Category';
 }
+else if (sel_action_val=='tags')
+{
+var header='Tags';
+}
 else
 {
 var header='Author';
@@ -2947,6 +2967,10 @@ else
 if (sel_action_val=='categs')
 {
 var header='Category';
+}
+else if (sel_action_val=='tags')
+{
+var header='Tags';
 }
 else
 {
