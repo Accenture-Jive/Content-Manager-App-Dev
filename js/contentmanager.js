@@ -920,7 +920,7 @@ else
 {
 $("#tag_select_items_button").show();
 $("#tagTo").show();
-alert($('input:textbox').val());
+alert($('input[id=tag_sel]').val(););
 document.getElementById("add_tag").innerHTML=$('input:textbox').val();
 getDocs(space_url);
 getFiles(space_url);
