@@ -920,7 +920,6 @@ else
 {
 $("#tag_select_items_button").show();
 $("#tagTo").show();
-alert($('#tag_sel').val());
 $("#add_tag_button").hide();
 $("#tag_sel").hide();
 document.getElementById("add_tag").innerHTML=$('#tag_sel').val();
