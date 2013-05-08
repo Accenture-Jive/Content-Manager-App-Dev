@@ -2302,27 +2302,16 @@ title : "",
 author : "",
 updated : "",
 fileUrl : "",
-category: ""
-}
-
-tagFiles = {
-title : "",
-author : "",
-updated : "",
-fileUrl : "",
+category: "",
 tags: ""
 }
+
 // assigning values from the received response to the variables.
 postFiles.title = group.subject;
 postFiles.author = group.author.name.formatted;
 postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
-
-tagFiles.title = group.subject;
-tagFiles.author = group.author.name.formatted;
-tagFiles.updated = group.updated;
-tagFiles.fileUrl = group.resources.self.ref;
 tagFiles.tags = group.tags;
 
 // adding each file in a row as per the received response.
@@ -2447,7 +2436,8 @@ title : "",
 author : "",
 updated : "",
 fileUrl : "",
-category:""
+category:"",
+tags:""
 }
 
 // assigning values from received response to the variables.
@@ -2456,19 +2446,8 @@ postBlogs.author = group.author.name.formatted;
 postBlogs.updated = group.updated;
 postBlogs.fileUrl = group.resources.self.ref;
 postBlogs.category = group.categories;
+postBlogs.tags = group.tags;
 
-tagFiles = {
-title : "",
-author : "",
-updated : "",
-fileUrl : "",
-tags: ""
-}
-tagFiles.title = group.subject;
-tagFiles.author = group.author.name.formatted;
-tagFiles.updated = group.updated;
-tagFiles.fileUrl = group.resources.self.ref;
-tagFiles.tags = group.tags;
 
 // adding each blog in a row as per the received response.
 if (sel_action_val=='categs')
@@ -2498,12 +2477,12 @@ arrayIndex++;
 }
 else if (sel_action_val=='tags')
 {
-var tags=tagFiles.tags;
+var tags=postBlogs.tags;
 console.log("tags: "+tags);
-files_row = files_row + '<tr>'+
-'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
-'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
-'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.tags+'</td>'+
+blog_row = blog_row + '<tr>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" id="blog_cb'+index+'" name="blog_cb" class="blog_cb" onclick="javascript:checkUncheck(this.name);" value="'+postBlogs.fileUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postBlogs.title+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postBlogs.tags+'</td>'+
 '</tr>';
 
 for(var ind=0;ind<tags.length;ind++)
@@ -2512,8 +2491,8 @@ if (tags[ind]==selected_tag)
 {
 console.log("tags= "+tags);
 console.log("selected_tag= "+selected_tag);
-console.log(document.getElementById("file_cb"+index).value);
-var temp_id="file_cb"+index;
+console.log(document.getElementById("blog_cb"+index).value);
+var temp_id="blog_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
@@ -2586,7 +2565,8 @@ title : "",
 author : "",
 updated : "",
 docUrl : "",
-category: ""
+category: "",
+tags: ""
 }
 
 postDoc.title = group.subject;
@@ -2594,19 +2574,7 @@ postDoc.author = group.author.name.formatted;
 postDoc.updated = group.updated;
 postDoc.docUrl = group.resources.self.ref;
 postDoc.category = group.categories;
-
-tagFiles = {
-title : "",
-author : "",
-updated : "",
-fileUrl : "",
-tags: ""
-}
-tagFiles.title = group.subject;
-tagFiles.author = group.author.name.formatted;
-tagFiles.updated = group.updated;
-tagFiles.fileUrl = group.resources.self.ref;
-tagFiles.tags = group.tags;
+postDoc.tags = group.tags;
 
 if (sel_action_val=='categs')
 {
@@ -2635,12 +2603,12 @@ arrayIndex++;
 }
 else if (sel_action_val=='tags')
 {
-var tags=tagFiles.tags;
+var tags=postDoc.tags;
 console.log("tags: "+tags);
-files_row = files_row + '<tr>'+
-'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
-'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
-'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.tags+'</td>'+
+docs_row = docs_row + '<tr>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" id="doc_cb'+index+'" name="doc_cb" class="doc_cb" onclick="javascript:checkUncheck(this.name);" value="'+postDoc.docUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDoc.title+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDoc.tags+'</td>'+
 '</tr>';
 
 for(var ind=0;ind<tags.length;ind++)
@@ -2649,8 +2617,8 @@ if (tags[ind]==selected_tag)
 {
 console.log("tags= "+tags);
 console.log("selected_tag= "+selected_tag);
-console.log(document.getElementById("file_cb"+index).value);
-var temp_id="file_cb"+index;
+console.log(document.getElementById("doc_cb"+index).value);
+var temp_id="doc_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
@@ -2722,7 +2690,8 @@ title : "",
 author : "",
 updated : "",
 discUrl : "",
-category : ""
+category : "",
+tags: ""
 }
 
 postDisc.title = group.subject;
@@ -2730,19 +2699,7 @@ postDisc.author = group.author.name.formatted;
 postDisc.updated = group.updated;
 postDisc.discUrl = group.resources.self.ref;
 postDisc.category = group.categories;
-
-tagFiles = {
-title : "",
-author : "",
-updated : "",
-fileUrl : "",
-tags: ""
-}
-tagFiles.title = group.subject;
-tagFiles.author = group.author.name.formatted;
-tagFiles.updated = group.updated;
-tagFiles.fileUrl = group.resources.self.ref;
-tagFiles.tags = group.tags;
+postDisc.tags = group.tags;
 
 if (sel_action_val=='categs')
 {
@@ -2771,12 +2728,12 @@ arrayIndex++;
 }
 else if (sel_action_val=='tags')
 {
-var tags=tagFiles.tags;
+var tags=postDisc.tags;
 console.log("tags: "+tags);
-files_row = files_row + '<tr>'+
-'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
-'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
-'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.tags+'</td>'+
+disc_row = disc_row + '<tr>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" id="disc_cb'+index+'" name="disc_cb" class="disc_cb" onclick="javascript:checkUncheck(this.name);" value="'+postDisc.discUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDisc.title+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postDisc.tags+'</td>'+
 '</tr>';
 
 for(var ind=0;ind<tags.length;ind++)
@@ -2785,8 +2742,8 @@ if (tags[ind]==selected_tag)
 {
 console.log("tags= "+tags);
 console.log("selected_tag= "+selected_tag);
-console.log(document.getElementById("file_cb"+index).value);
-var temp_id="file_cb"+index;
+console.log(document.getElementById("disc_cb"+index).value);
+var temp_id="disc_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
@@ -2897,7 +2854,7 @@ arrayIndex++;
 }
 else if (sel_action_val=='tags')
 {
-var tags=tagFiles.tags;
+var tags=postIdea.tags;
 console.log("tags: "+tags);
 idea_row = idea_row + '<tr>'+
 '<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="idea_cb'+index+'" name="idea_cb" class="idea_cb" onclick="javascript:checkUncheck(this.name);" value="'+postIdea.fileUrl+'">'+'</td>'+
@@ -2983,7 +2940,8 @@ title : "",
 author : "",
 updated : "",
 fileUrl : "",
-category: ""
+category: "",
+tags:""
 }
 
 postPolls.title = group.subject;
@@ -2991,20 +2949,7 @@ postPolls.author = group.author.name.formatted;
 postPolls.updated = group.updated;
 postPolls.fileUrl = group.resources.self.ref;
 postPolls.category = group.categories;
-
-
-tagFiles = {
-title : "",
-author : "",
-updated : "",
-fileUrl : "",
-tags: ""
-}
-tagFiles.title = group.subject;
-tagFiles.author = group.author.name.formatted;
-tagFiles.updated = group.updated;
-tagFiles.fileUrl = group.resources.self.ref;
-tagFiles.tags = group.tags;
+postPolls.tags = group.tags;
 
 if (sel_action_val=='categs')
 {
@@ -3033,12 +2978,12 @@ arrayIndex++;
 }
 else if (sel_action_val=='tags')
 {
-var tags=tagFiles.tags;
+var tags=postPolls.tags;
 console.log("tags: "+tags);
-files_row = files_row + '<tr>'+
-'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
-'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
-'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.tags+'</td>'+
+poll_row = poll_row + '<tr>'+
+'<td style="border:1px solid black;border: 1px solid #000000;text-align: right;padding: 2px;">'+'<input type="checkbox" id="poll_cb'+index+'" name="poll_cb" class="poll_cb" onclick="javascript:checkUncheck(this.name);" value="'+postPolls.fileUrl+'">'+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postPolls.title+'</td>'+
+'<td style="border:1px solid black;border: 1px solid #000000;padding: 2px;">'+postPolls.tags+'</td>'+
 '</tr>';
 
 for(var ind=0;ind<tags.length;ind++)
@@ -3047,8 +2992,8 @@ if (tags[ind]==selected_tag)
 {
 console.log("tags= "+tags);
 console.log("selected_tag= "+selected_tag);
-console.log(document.getElementById("file_cb"+index).value);
-var temp_id="file_cb"+index;
+console.log(document.getElementById("poll_cb"+index).value);
+var temp_id="poll_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
