@@ -911,7 +911,7 @@ function tagSel()
 {
 arrayIndex=0;
 //put the selected category to further use
-selected_tag=document.getElementById('tag_sel').value;
+selected_tag=$('#tag_sel').val();
 alert(selected_tag);
 if (selected_tag=="val1")
 {
