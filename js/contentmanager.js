@@ -2819,7 +2819,7 @@ fields : '@all',
 count : 50,
 place : space_url
 }).execute(function(response) {
-//console.log("Ideas: "+JSON.stringify(response));
+console.log("Ideas: "+JSON.stringify(response));
 
 var idea = response.list;
 var postIdea;
