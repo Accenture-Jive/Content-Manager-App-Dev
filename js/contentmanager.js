@@ -912,7 +912,7 @@ function tagSel()
 arrayIndex=0;
 //put the selected category to further use
 selected_tag=document.getElementById('tag_sel').value;
-
+alert(selected_tag);
 if (selected_tag=="val1")
 {
 $("#tag_select_items_button").hide();
