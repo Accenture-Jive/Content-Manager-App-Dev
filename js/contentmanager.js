@@ -912,7 +912,6 @@ function tagSel()
 arrayIndex=0;
 //put the selected category to further use
 selected_tag=$('#tag_sel').val();
-alert(selected_tag);
 if (selected_tag=="val1")
 {
 $("#tag_select_items_button").hide();
@@ -3792,6 +3791,8 @@ var id='';
 $("label").mouseenter(function(e){
 
 id = this.id;
+console.log("val:"+document.getElementById(id).innerHTML);
+if(document.getElementById(id).innerHTML!='null')
 tooltipValue=document.getElementById(id).innerHTML;
 
 $('div.tooltip').remove();
