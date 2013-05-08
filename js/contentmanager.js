@@ -2312,7 +2312,7 @@ postFiles.author = group.author.name.formatted;
 postFiles.updated = group.updated;
 postFiles.fileUrl = group.resources.self.ref;
 postFiles.category = group.categories;
-tagFiles.tags = group.tags;
+postFiles.tags = group.tags;
 
 // adding each file in a row as per the received response.
 if (sel_action_val=='categs')
@@ -2342,12 +2342,12 @@ arrayIndex++;
 }
 else if (sel_action_val=='tags')
 {
-var tags=tagFiles.tags;
+var tags=postFiles.tags;
 console.log("tags: "+tags);
 files_row = files_row + '<tr>'+
-'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
-'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
-'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.tags+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+postFiles.fileUrl+'">'+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.title+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postFiles.tags+'</td>'+
 '</tr>';
 
 for(var ind=0;ind<tags.length;ind++)
