@@ -2864,8 +2864,8 @@ idea_row = idea_row + '<tr>'+
 
 for(var ind=0;ind<tags.length;ind++)
 {
-//if (tags[ind]==selected_tag)
-//{
+if (tags[ind]==selected_tag)
+{
 console.log("tags= "+tags);
 console.log("selected_tag= "+selected_tag);
 console.log(document.getElementById("idea_cb"+index).value);
@@ -2874,7 +2874,7 @@ console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
-//}
+}
 }
 }
 else
