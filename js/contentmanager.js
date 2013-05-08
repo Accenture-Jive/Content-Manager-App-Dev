@@ -31,6 +31,8 @@ var sel_action_val='';
 var msg2='Please select a place.';
 
 var selected_cat='';
+var selected_tag='';
+
 
 function showLoading() 
 {
@@ -909,9 +911,9 @@ function tagSel()
 {
 arrayIndex=0;
 //put the selected category to further use
-selected_cat=document.getElementById('tag_sel').value;
+selected_tag=document.getElementById('tag_sel').value;
 
-if (selected_cat=="val1")
+if (selected_tag=="val1")
 {
 $("#tag_select_items_button").hide();
 $("#tagTo").hide();
