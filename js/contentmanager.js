@@ -2819,7 +2819,7 @@ fields : '@all',
 count : 50,
 place : space_url
 }).execute(function(response) {
-//console.log("Ideas: "+JSON.stringify(response));
+console.log("Ideas: "+JSON.stringify(response));
 
 var idea = response.list;
 var postIdea;
@@ -2858,7 +2858,8 @@ title : "",
 author : "",
 updated : "",
 ideaUrl : "",
-category: ""
+category: "",
+tags: ""
 }
 
 postIdea.title = group.subject;
@@ -2866,19 +2867,8 @@ postIdea.author = group.author.name.formatted;
 postIdea.updated = group.updated;
 postIdea.ideaUrl = group.resources.self.ref;
 postIdea.category = group.categories;
+postIdea.tags = group.tags;
 
-tagFiles = {
-title : "",
-author : "",
-updated : "",
-fileUrl : "",
-tags: ""
-}
-tagFiles.title = group.subject;
-tagFiles.author = group.author.name.formatted;
-tagFiles.updated = group.updated;
-tagFiles.fileUrl = group.resources.self.ref;
-tagFiles.tags = group.tags;
 
 if (sel_action_val=='categs')
 {
@@ -2921,8 +2911,8 @@ if (tags[ind]==selected_tag)
 {
 console.log("tags= "+tags);
 console.log("selected_tag= "+selected_tag);
-console.log(document.getElementById("file_cb"+index).value);
-var temp_id="file_cb"+index;
+console.log(document.getElementById("idea_cb"+index).value);
+var temp_id="idea_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
