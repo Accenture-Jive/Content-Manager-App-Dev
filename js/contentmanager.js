@@ -3791,8 +3791,6 @@ var id='';
 $("label").mouseenter(function(e){
 
 id = this.id;
-console.log("val:"+document.getElementById(id).innerHTML);
-if(document.getElementById(id).innerHTML!='null')
 tooltipValue=document.getElementById(id).innerHTML;
 
 $('div.tooltip').remove();
