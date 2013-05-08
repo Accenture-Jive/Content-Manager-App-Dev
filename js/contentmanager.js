@@ -2858,7 +2858,8 @@ title : "",
 author : "",
 updated : "",
 ideaUrl : "",
-category: ""
+category: "",
+tags: ""
 }
 
 postIdea.title = group.subject;
@@ -2866,19 +2867,8 @@ postIdea.author = group.author.name.formatted;
 postIdea.updated = group.updated;
 postIdea.ideaUrl = group.resources.self.ref;
 postIdea.category = group.categories;
+postIdea.tags = group.tags;
 
-tagFiles = {
-title : "",
-author : "",
-updated : "",
-fileUrl : "",
-tags: ""
-}
-tagFiles.title = group.subject;
-tagFiles.author = group.author.name.formatted;
-tagFiles.updated = group.updated;
-tagFiles.fileUrl = group.resources.self.ref;
-tagFiles.tags = group.tags;
 
 if (sel_action_val=='categs')
 {
@@ -2909,10 +2899,10 @@ else if (sel_action_val=='tags')
 {
 var tags=tagFiles.tags;
 console.log("tags: "+tags);
-files_row = files_row + '<tr>'+
-'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="file_cb'+index+'" name="file_cb" class="file_cb" onclick="javascript:checkUncheck(this.name);" value="'+tagFiles.fileUrl+'">'+'</td>'+
-'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.title+'</td>'+
-'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+tagFiles.tags+'</td>'+
+idea_row = idea_row + '<tr>'+
+'<td style="border:1px ;border: 1px solid #000000;text-align:right;padding:2px;">'+'<input type="checkbox" id="idea_cb'+index+'" name="idea_cb" class="idea_cb" onclick="javascript:checkUncheck(this.name);" value="'+postIdea.fileUrl+'">'+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postIdea.title+'</td>'+
+'<td style="border:1px ;border: 1px solid #000000;padding: 2px;">'+postIdea.tags+'</td>'+
 '</tr>';
 
 for(var ind=0;ind<tags.length;ind++)
@@ -2921,8 +2911,8 @@ if (tags[ind]==selected_tag)
 {
 console.log("tags= "+tags);
 console.log("selected_tag= "+selected_tag);
-console.log(document.getElementById("file_cb"+index).value);
-var temp_id="file_cb"+index;
+console.log(document.getElementById("idea_cb"+index).value);
+var temp_id="idea_cb"+index;
 console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
