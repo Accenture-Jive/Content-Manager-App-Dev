@@ -2410,7 +2410,7 @@ function filterCheckedUncheckCatgUrl(){
 			checkedIndex++;
 		 }
 		 else {
-				// alert("false");
+				alert("uncheckItemArray");
 			uncheckItemArray[uncheckedIndex] = $(this).val();
 			uncheckedIndex++;
 		}
