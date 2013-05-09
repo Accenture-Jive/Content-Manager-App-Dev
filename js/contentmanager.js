@@ -2272,24 +2272,8 @@ osapi.jive.corev3.places.requestPicker(params);
 
 //*****************Code for Managing catagories*******************
 
-var mainCheckedItems = new Array();
-var mainUncheckItems = new Array();
-
-/*mainUncheckItems[0] = "https://accenture.jiveon.com/api/core/v3/contents/43423";
-mainUncheckItems[1] = "https://accenture.jiveon.com/api/core/v3/contents/43425";
-mainUncheckItems[2] = "https://accenture.jiveon.com/api/core/v3/contents/43426";
-mainUncheckItems[3] = "https://accenture.jiveon.com/api/core/v3/contents/43427";
-mainCheckedItems[0] = "https://accenture.jiveon.com/api/core/v3/contents/43421";
-mainCheckedItems[1] = "https://accenture.jiveon.com/api/core/v3/contents/43420";
-mainCheckedItems[2] = "https://accenture.jiveon.com/api/core/v3/contents/43424";*/
-
 var  checkedItemsArray = new Array();
 var uncheckItemArray = new Array();
-
-var checkItemArrayUpdated = new Array();
-var uncheckedItemArrayUpdated = new Array();
-
- 
 
 function filterCheckedUncheckCatgUrl(){
 	
@@ -2406,7 +2390,8 @@ function filterCheckedUncheckCatgUrl(){
 		
 	
 	    });
-		
+		alert("Categories-checkedItemsArray .length = "+checkedItemsArray.length);
+		alert("Categories-uncheckItemArray .length = "+uncheckItemArray.length);
 		catIndex=0;
 		updateCategoriesForNewContents1();
 		//removeCategoriesForContents();
@@ -2638,24 +2623,8 @@ else {
 
 //*****************Code for Managing Tags*******************
 
-var mainCheckedItems = new Array();
-var mainUncheckItems = new Array();
-
-/*mainUncheckItems[0] = "https://accenture.jiveon.com/api/core/v3/contents/43423";
-mainUncheckItems[1] = "https://accenture.jiveon.com/api/core/v3/contents/43425";
-mainUncheckItems[2] = "https://accenture.jiveon.com/api/core/v3/contents/43426";
-mainUncheckItems[3] = "https://accenture.jiveon.com/api/core/v3/contents/43427";
-mainCheckedItems[0] = "https://accenture.jiveon.com/api/core/v3/contents/43421";
-mainCheckedItems[1] = "https://accenture.jiveon.com/api/core/v3/contents/43420";
-mainCheckedItems[2] = "https://accenture.jiveon.com/api/core/v3/contents/43424";*/
-
 var  checkedItemsArray = new Array();
 var uncheckItemArray = new Array();
-
-var checkItemArrayUpdated = new Array();
-var uncheckedItemArrayUpdated = new Array();
-
- 
 
 function filterCheckedUncheckTagUrl(){
 	
@@ -2879,7 +2848,7 @@ if(catIndex < checkedItemsArray.length) {
 				//alert(JSON.stringify(contentCatResponseObj));
 				//console.log(JSON.stringify(contentCatResponseObj));
 				
-					//console.log(contentCatResponseObj.categories);
+					//console.log(contentCatResponseObj.tags);
 					//alert("selected_cat = "+selected_cat);
 				toUpdateTags = contentCatResponseObj.tags;
 				
@@ -2904,7 +2873,7 @@ if(catIndex < checkedItemsArray.length) {
 					//console.log("VVVV-- "+updatedTagList[index]);
 				}
 				
-				//console.log("toUpdateCategories = "+toUpdateCategories);
+				//console.log("toUpdateTags = "+toUpdateTags);
 				
 				contentCatResponseObj.tags = updatedTagList;
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
@@ -4314,18 +4283,18 @@ document.getElementById("frame1").contentDocument.body.innerHTML = "Updating cat
 }
 	for(var index=0; index < mainCheckedItems.length;index++) {
 		//	alert("checked items : "+mainCheckedItems[index]);
-			console.log("checked items : "+mainCheckedItems[index]);
+			//console.log("checked items : "+mainCheckedItems[index]);
 		}
 		
 		for(var index=0;index < mainUncheckItems.length;index++) {
 		//alert("unchecked items : "+mainUncheckItems[index]);
-			console.log("unchecked items : "+mainUncheckItems[index]);
+			//console.log("unchecked items : "+mainUncheckItems[index]);
 		}
 		
-		alert("mainCheckedItems.length = "+mainCheckedItems.length);
-		console.log("mainCheckedItems.length = "+mainCheckedItems.length);
-		alert("mainUncheckItems.length = "+mainUncheckItems.length);
-		console.log("mainUncheckItems.length = "+mainUncheckItems.length);
+		//alert("mainCheckedItems.length = "+mainCheckedItems.length);
+		//console.log("mainCheckedItems.length = "+mainCheckedItems.length);
+		//alert("mainUncheckItems.length = "+mainUncheckItems.length);
+		//console.log("mainUncheckItems.length = "+mainUncheckItems.length);
 		//***********************************
 		filterCheckedUncheckCatgUrl1();
 		
