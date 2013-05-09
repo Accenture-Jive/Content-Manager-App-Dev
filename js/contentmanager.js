@@ -2866,6 +2866,7 @@ if(catSelection && !checkFlagItem) {
 		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("blog_cb"+index).value;
 		contentUnCheckedIndex++;
 }
+}
 
 else if (sel_action_val=='tags')
 {
@@ -3003,6 +3004,7 @@ if(catSelection && !checkFlagItem) {
 		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("doc_cb"+index).value;
 		contentUnCheckedIndex++;
 }
+}
 else if (sel_action_val=='tags')
 {
 var tags=postDoc.tags;
@@ -3136,6 +3138,7 @@ if(catSelection) {
 if(catSelection && !checkFlagItem) {
 		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("disc_cb"+index).value;
 		contentUnCheckedIndex++;
+}
 }
 else if (sel_action_val=='tags')
 {
@@ -3272,6 +3275,7 @@ if(catSelection && !checkFlagItem) {
 		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("idea_cb"+index).value;
 		contentUnCheckedIndex++;
 }
+}
 else if (sel_action_val=='tags')
 {
 var tags=postIdea.tags;
@@ -3404,6 +3408,7 @@ if(catSelection) {
 if(catSelection && !checkFlagItem) {
 		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("poll_cb"+index).value;
 		contentUnCheckedIndex++;
+}
 }
 else if (sel_action_val=='tags')
 {
