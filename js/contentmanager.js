@@ -2386,6 +2386,9 @@ function filterCheckedUncheckCatgUrl(){
 	//  alert("hi filter");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
+	  checkedItemsArray= new Array();
+	  uncheckItemArray= new Array();
+	  
         var val = [];
 		var contentTypeCheckBoxIdArray = new Array();
 		contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
