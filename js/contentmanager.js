@@ -2399,7 +2399,7 @@ function filterCheckedUncheckCatgUrl(){
 		contentTypeCheckBoxIdArray[5] = '#blogTable input[type=checkbox]';
 		for(var index=0;index<contentTypeCheckBoxIdArray.length;index++)
         {    
-       $(contentTypeCheckBoxIdArray[index]).each(function(i){
+       $('#filesTable input[type=checkbox]').each(function(){
 			
 		 //val[i] = $(this).val();
 		 //alert(val[i]);
