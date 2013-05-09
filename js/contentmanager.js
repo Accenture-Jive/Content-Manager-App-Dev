@@ -2710,12 +2710,6 @@ console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
-if(catSelection) {
-	mainCheckedItems[contentCheckedIndex] = document.getElementById("file_cb"+index).value;
-	contentCheckedIndex++;
-	checkFlagItem = true;
-	break;
-}
 }
 }
 }
@@ -2741,6 +2735,13 @@ console.log("temp_id= "+temp_id);
 addId[arrayIndex]=temp_id;
 console.log("Array val: "+addId[arrayIndex]);
 arrayIndex++;
+if(catSelection) {
+	mainCheckedItems[contentCheckedIndex] = document.getElementById("file_cb"+index).value;
+	contentCheckedIndex++;
+	checkFlagItem = true;
+	break;
+}
+}
 }
 if(catSelection && !checkFlagItem) {
 		mainUncheckItems[contentUnCheckedIndex] = document.getElementById("file_cb"+index).value;
