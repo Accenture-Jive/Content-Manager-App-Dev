@@ -2410,7 +2410,7 @@ function filterCheckedUncheckCatgUrl(){
 			checkedIndex++;
 		 }
 		 else {
-				alert("uncheckItemArray");
+				//alert("uncheckItemArray");
 			uncheckItemArray[uncheckedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
 			uncheckedIndex++;
 		}
@@ -2766,27 +2766,41 @@ function filterCheckedUncheckTagUrl(){
 	//  alert("hi filter");
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
+	  checkedItemsArray= new Array();
+	  uncheckItemArray= new Array();
+	  
         var val = [];
-        $(':checkbox').each(function(i){
+		var contentTypeCheckBoxIdArray = new Array();
+		contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
+		contentTypeCheckBoxIdArray[1] = '#docsTable input[type=checkbox]';
+		contentTypeCheckBoxIdArray[2] = '#discTable input[type=checkbox]';
+		contentTypeCheckBoxIdArray[3] = '#ideaTable input[type=checkbox]';
+		contentTypeCheckBoxIdArray[4] = '#pollTable input[type=checkbox]';
+		contentTypeCheckBoxIdArray[5] = '#blogTable input[type=checkbox]';
+		for(var index=0;index<contentTypeCheckBoxIdArray.length;index++)
+        {    
+       $(contentTypeCheckBoxIdArray[index]).each(function(){
 			
-		 val[i] = $(this).val();
+		 //val[i] = $(this).val();
 		 //alert(val[i]);
-		 if(val[i] != 'on'){
-		 if($(this).is(':checked')){
+		 if($(contentTypeCheckBoxIdArray[index]).val()!= 'on'){
+		 if($(contentTypeCheckBoxIdArray[index]).is(':checked')){
 		 //alert("true");
-			checkedItemsArray[checkedIndex] = $(this).val();
+			checkedItemsArray[checkedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
 			checkedIndex++;
 		 }
 		 else {
-				// alert("false");
-			uncheckItemArray[uncheckedIndex] = $(this).val();
+				//alert("uncheckItemArray");
+			uncheckItemArray[uncheckedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
 			uncheckedIndex++;
 		}
 		}
 		
 	
 	    });
-		
+		}
+		alert("Categories-checkedItemsArray .length = "+checkedItemsArray.length);
+		alert("Categories-uncheckItemArray .length = "+uncheckItemArray.length);
 		catIndex=0;
 		updateTagsForNewContents1();
 		//removeCategoriesForContents();
