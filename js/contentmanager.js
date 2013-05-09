@@ -2401,9 +2401,9 @@ function filterCheckedUncheckCatgUrl(){
         {    
        $(contentTypeCheckBoxIdArray[index]).each(function(i){
 			
-		 val[i] = $(this).val();
+		 //val[i] = $(this).val();
 		 //alert(val[i]);
-		 if(val[i] != 'on'){
+		 if($(this).val()!= 'on'){
 		 if($(this).is(':checked')){
 		 //alert("true");
 			checkedItemsArray[checkedIndex] = $(this).val();
