@@ -4082,6 +4082,11 @@ if(sel_action_val=="categs")
 	
 		startUpdatingCategories();
 }
+else if(sel_action_val=="tags")
+{
+	
+		startUpdatingTags();
+}
 else {
 
 all_selected='';
@@ -4328,6 +4333,82 @@ document.getElementById("frame1").contentDocument.body.innerHTML = "Updating cat
 		catIndex = 0;
 		//updateCategoriesForNewContents1();
 		//removeCategoriesForContents();
+}
+
+
+
+function startUpdatingTags() {
+	//alert("tag selectionn....");
+	//alert("browserName = "+browserName);
+
+
+$("#selection_menu").hide();
+$("#stylized").show();
+$("#change_selection_div").show();
+$("#change_contents").hide();
+$("#start_copying_button").hide();
+
+$("#cmdu").show();
+$("#cmdu").text("Manage Tags");
+$("#src_place").hide();
+$("#start_copying_button").hide();
+$("#change_contents").hide();
+$("#button_div").hide();
+$("#tag_place").hide();
+$("#tag_sel").hide();
+$("#selTag").hide();
+$("#tagTo").show();
+$("#tag_select_items_button").hide();
+
+
+
+$("#selected_items").show();
+
+if(browserName=="MSIE")
+{
+var ieSpan='<span id="ieSpan" style="font-family:Tahoma;font-size:12px;font-color:#3778C7;"></span>';
+document.getElementById("selected_items").innerHTML=ieSpan; 
+}
+else
+{
+var iframe = '<iframe id="frame1"  style="width:650px;height:90px;margin-top:0px;font-family:Tahoma"></iframe>';
+document.getElementById("selected_items").innerHTML=iframe;  
+$("#tagTo").text("Updating this:");
+}
+
+if(browserName=="MSIE")
+{
+var finalurl=redirection_url+'/content';
+document.getElementById("ieSpan").innerHTML = 'The selected contents are being update with tag. The update contents will appear here in a short while: <a href='+'URL'+'>'+''+' - Contents</a>';
+}
+else
+{
+document.getElementById("frame1").contentDocument.body.style.fontFamily="Tahoma";	
+document.getElementById("frame1").contentDocument.body.style.fontSize = "12px";
+document.getElementById("frame1").contentDocument.body.style.color='Grey';
+document.getElementById("frame1").contentDocument.body.innerHTML = "Updating tags is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+'Updating content'.fontcolor("#3778C7")+"</span>";
+}
+	for(var index=0; index < mainCheckedItems.length;index++) {
+		//	alert("checked items : "+mainCheckedItems[index]);
+			console.log("checked items : "+mainCheckedItems[index]);
+		}
+		
+		for(var index=0;index < mainUncheckItems.length;index++) {
+		//alert("unchecked items : "+mainUncheckItems[index]);
+			console.log("unchecked items : "+mainUncheckItems[index]);
+		}
+		
+		alert("mainCheckedItems.length = "+mainCheckedItems.length);
+		console.log("mainCheckedItems.length = "+mainCheckedItems.length);
+		alert("mainUncheckItems.length = "+mainUncheckItems.length);
+		console.log("mainUncheckItems.length = "+mainUncheckItems.length);
+		//***********************************
+		filterCheckedUncheckTagUrl1();
+		
+	
+		catIndex = 0;
+		//updateTagsForNewContents1();
+		//removeTagsForContents();
 }
 function startCopying(){
 // handles actions after clicking the start copy button.
