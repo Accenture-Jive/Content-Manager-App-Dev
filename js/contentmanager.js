@@ -2387,7 +2387,16 @@ function filterCheckedUncheckCatgUrl(){
 	  var checkedIndex = 0;
 	  var uncheckedIndex = 0;
         var val = [];
-        $(':checkbox').each(function(i){
+		var contentTypeCheckBoxIdArray = new Array();
+		contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
+		contentTypeCheckBoxIdArray[1] = '#docsTable input[type=checkbox]';
+		contentTypeCheckBoxIdArray[2] = '#discTable input[type=checkbox]';
+		contentTypeCheckBoxIdArray[3] = '#ideaTable input[type=checkbox]';
+		contentTypeCheckBoxIdArray[4] = '#pollTable input[type=checkbox]';
+		contentTypeCheckBoxIdArray[5] = '#blogTable input[type=checkbox]';
+		for(var index=0;index<contentTypeCheckBoxIdArray.length;index++)
+        {    
+       $(contentTypeCheckBoxIdArray[index]).each(function(i){
 			
 		 val[i] = $(this).val();
 		 //alert(val[i]);
@@ -2406,6 +2415,7 @@ function filterCheckedUncheckCatgUrl(){
 		
 	
 	    });
+		}
 		alert("Categories-checkedItemsArray .length = "+checkedItemsArray.length);
 		alert("Categories-uncheckItemArray .length = "+uncheckItemArray.length);
 		catIndex=0;
@@ -4315,18 +4325,18 @@ document.getElementById("frame1").contentDocument.body.innerHTML = "Updating cat
 }
 	for(var index=0; index < mainCheckedItems.length;index++) {
 		//	alert("checked items : "+mainCheckedItems[index]);
-			console.log("checked items : "+mainCheckedItems[index]);
+			//console.log("checked items : "+mainCheckedItems[index]);
 		}
 		
 		for(var index=0;index < mainUncheckItems.length;index++) {
 		//alert("unchecked items : "+mainUncheckItems[index]);
-			console.log("unchecked items : "+mainUncheckItems[index]);
+			//console.log("unchecked items : "+mainUncheckItems[index]);
 		}
 		
-		alert("mainCheckedItems.length = "+mainCheckedItems.length);
-		console.log("mainCheckedItems.length = "+mainCheckedItems.length);
-		alert("mainUncheckItems.length = "+mainUncheckItems.length);
-		console.log("mainUncheckItems.length = "+mainUncheckItems.length);
+		//alert("mainCheckedItems.length = "+mainCheckedItems.length);
+		//console.log("mainCheckedItems.length = "+mainCheckedItems.length);
+		//alert("mainUncheckItems.length = "+mainUncheckItems.length);
+		//console.log("mainUncheckItems.length = "+mainUncheckItems.length);
 		//***********************************
 		filterCheckedUncheckCatgUrl1();
 		
@@ -4391,18 +4401,18 @@ document.getElementById("frame1").contentDocument.body.innerHTML = "Updating tag
 }
 	for(var index=0; index < mainCheckedItems.length;index++) {
 		//	alert("checked items : "+mainCheckedItems[index]);
-			console.log("checked items : "+mainCheckedItems[index]);
+			//console.log("checked items : "+mainCheckedItems[index]);
 		}
 		
 		for(var index=0;index < mainUncheckItems.length;index++) {
 		//alert("unchecked items : "+mainUncheckItems[index]);
-			console.log("unchecked items : "+mainUncheckItems[index]);
+			//console.log("unchecked items : "+mainUncheckItems[index]);
 		}
 		
-		alert("mainCheckedItems.length = "+mainCheckedItems.length);
-		console.log("mainCheckedItems.length = "+mainCheckedItems.length);
-		alert("mainUncheckItems.length = "+mainUncheckItems.length);
-		console.log("mainUncheckItems.length = "+mainUncheckItems.length);
+		//alert("mainCheckedItems.length = "+mainCheckedItems.length);
+		//console.log("mainCheckedItems.length = "+mainCheckedItems.length);
+		//alert("mainUncheckItems.length = "+mainUncheckItems.length);
+		//console.log("mainUncheckItems.length = "+mainUncheckItems.length);
 		//***********************************
 		filterCheckedUncheckTagUrl1();
 		
