@@ -2718,6 +2718,7 @@ if(catSelection) {
 }
 }
 }
+}
 else if (sel_action_val=='tags')
 {
 var tags=postFiles.tags;
