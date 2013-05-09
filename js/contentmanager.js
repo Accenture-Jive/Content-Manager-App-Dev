@@ -2403,15 +2403,15 @@ function filterCheckedUncheckCatgUrl(){
 			
 		 //val[i] = $(this).val();
 		 //alert(val[i]);
-		 if($(this).val()!= 'on'){
+		 if($(contentTypeCheckBoxIdArray[index]).val()!= 'on'){
 		 if($(contentTypeCheckBoxIdArray[index]).is(':checked')){
 		 //alert("true");
-			checkedItemsArray[checkedIndex] = $(this).val();
+			checkedItemsArray[checkedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
 			checkedIndex++;
 		 }
 		 else {
 				alert("uncheckItemArray");
-			uncheckItemArray[uncheckedIndex] = $(this).val();
+			uncheckItemArray[uncheckedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
 			uncheckedIndex++;
 		}
 		}
