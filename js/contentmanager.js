@@ -2963,7 +2963,7 @@ if(catIndex < checkedItemsArray.length) {
 				
 				});
 				catIndex++;
-				updateCategoriesForNewContents1();
+				updateTagsForNewContents1();
 				
 			});
 
