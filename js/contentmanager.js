@@ -2778,6 +2778,18 @@ function filterCheckedUncheckTagUrl(){
 		}
 		
 	function filterCheckedUncheckTagUrl1(){
+	
+	for(var index=0; index < checkedItemsArray.length;index++) {
+      //alert("new checked items : "+checkedItemsArray[index]);
+      console.log("new checked items : "+checkedItemsArray[index]);
+    }
+  for(var index=0;index < uncheckedItemArrayUpdated.length;index++) {
+      //alert("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+      console.log("new unchecked items : "+uncheckedItemArrayUpdated[index]);
+    }
+
+
+	
 	var contentTypeCheckBoxIdArray = new Array();
 
               contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
@@ -2819,7 +2831,7 @@ function filterCheckedUncheckTagUrl(){
                                 alert("uncheckItemArray.length = "+uncheckItemArray.length);
                                 console.log("uncheckItemArray.length = "+uncheckItemArray.length);
 				catIndex = 0;
-		        updateTagsForNewContents1();
+		        //updateTagsForNewContents1();
 		
 		}
 
