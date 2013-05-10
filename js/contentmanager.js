@@ -2943,7 +2943,7 @@ if(catIndex < checkedItemsArray.length) {
 				}
 			//	alert("isTagExisting = "+isTagExisting);
 					if(!isTagExisting){
-						updatedTagList[tempIndex]=selected_cat;
+						updatedTagList[tempIndex]=selected_tag;
 						isTagExisting = false;
 					}
 					
