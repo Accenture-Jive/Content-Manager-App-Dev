@@ -2380,50 +2380,45 @@ function filterCheckedUncheckCatgUrl(){
 		}
 		
 	function filterCheckedUncheckCatgUrl1(){
-	
-     
-	  
-	//  alert("hi filter");
-	  var checkedIndex = 0;
-	  var uncheckedIndex = 0;
-	  checkedItemsArray= new Array();
-	  uncheckItemArray= new Array();
-	  
+	              contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
+                  contentTypeCheckBoxIdArray[1] = '#docsTable input[type=checkbox]';
+                  contentTypeCheckBoxIdArray[2] = '#ideaTable input[type=checkbox]';
+                  contentTypeCheckBoxIdArray[3] = '#pollTable input[type=checkbox]';
+                  contentTypeCheckBoxIdArray[4] = '#blogTable input[type=checkbox]';
+                  contentTypeCheckBoxIdArray[5] = '#discTable input[type=checkbox]';
+
+
+                  var checkedIndex = 0;
+                  var uncheckedIndex = 0;
         var val = [];
-		var contentTypeCheckBoxIdArray = new Array();
-		contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
-		contentTypeCheckBoxIdArray[1] = '#docsTable input[type=checkbox]';
-		contentTypeCheckBoxIdArray[2] = '#discTable input[type=checkbox]';
-		contentTypeCheckBoxIdArray[3] = '#ideaTable input[type=checkbox]';
-		contentTypeCheckBoxIdArray[4] = '#pollTable input[type=checkbox]';
-		contentTypeCheckBoxIdArray[5] = '#blogTable input[type=checkbox]';
-		for(var index=0;index<contentTypeCheckBoxIdArray.length;index++)
-        {    
-       $(contentTypeCheckBoxIdArray[index]).each(function(){
-			
-		 //val[i] = $(this).val();
-		 //alert(val[i]);
-		 if($(contentTypeCheckBoxIdArray[index]).val()!= 'on'){
-		 if($(contentTypeCheckBoxIdArray[index]).is(':checked')){
-		 //alert("true");
-			checkedItemsArray[checkedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
-			checkedIndex++;
-		 }
-		 else {
-				//alert("uncheckItemArray");
-			uncheckItemArray[uncheckedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
-			uncheckedIndex++;
-		}
-		}
-		
-	
-	    });
-		}
-		alert("Categories-checkedItemsArray .length = "+checkedItemsArray.length);
-		alert("Categories-uncheckItemArray .length = "+uncheckItemArray.length);
-		catIndex=0;
-		updateCategoriesForNewContents1();
-		//removeCategoriesForContents();
+                                for(index =0;index <  contentTypeCheckBoxIdArray.length;index++) {
+        //$('#filesTable input[type=checkbox]').each(function(i){
+                                $(contentTypeCheckBoxIdArray[index]).each(function(i){
+                                                
+                                val[i] = $(this).val();
+                                // alert(val[i]);
+                                if(val[i] != 'on'){
+                                if($(this).is(':checked')){
+                                //alert("true");
+                                                checkedItemsArray[checkedIndex] = $(this).val();
+                                                checkedIndex++;
+                                }
+                                else {
+                                                                // alert("false");
+                                                uncheckItemArray[uncheckedIndex] = $(this).val();
+                                                uncheckedIndex++;
+                                }
+                                }
+                                
+                
+                    });
+                                
+                                }
+                                alert("checkedItemsArray.length = "+checkedItemsArray.length);
+                                console.log("checkedItemsArray.length = "+checkedItemsArray.length);
+                                alert("uncheckItemArray.length = "+uncheckItemArray.length);
+                                console.log("uncheckItemArray.length = "+uncheckItemArray.length);
+
 
 		
 		}
@@ -2760,50 +2755,44 @@ function filterCheckedUncheckTagUrl(){
 		}
 		
 	function filterCheckedUncheckTagUrl1(){
-	
-     
-	  
-	//  alert("hi filter");
-	  var checkedIndex = 0;
-	  var uncheckedIndex = 0;
-	  checkedItemsArray= new Array();
-	  uncheckItemArray= new Array();
-	  
+              contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
+                  contentTypeCheckBoxIdArray[1] = '#docsTable input[type=checkbox]';
+                  contentTypeCheckBoxIdArray[2] = '#ideaTable input[type=checkbox]';
+                  contentTypeCheckBoxIdArray[3] = '#pollTable input[type=checkbox]';
+                  contentTypeCheckBoxIdArray[4] = '#blogTable input[type=checkbox]';
+                  contentTypeCheckBoxIdArray[5] = '#discTable input[type=checkbox]';
+
+
+                  var checkedIndex = 0;
+                  var uncheckedIndex = 0;
         var val = [];
-		var contentTypeCheckBoxIdArray = new Array();
-		contentTypeCheckBoxIdArray[0] = '#filesTable input[type=checkbox]';
-		contentTypeCheckBoxIdArray[1] = '#docsTable input[type=checkbox]';
-		contentTypeCheckBoxIdArray[2] = '#discTable input[type=checkbox]';
-		contentTypeCheckBoxIdArray[3] = '#ideaTable input[type=checkbox]';
-		contentTypeCheckBoxIdArray[4] = '#pollTable input[type=checkbox]';
-		contentTypeCheckBoxIdArray[5] = '#blogTable input[type=checkbox]';
-		for(var index=0;index<contentTypeCheckBoxIdArray.length;index++)
-        {    
-       $(contentTypeCheckBoxIdArray[index]).each(function(){
-			
-		 //val[i] = $(this).val();
-		 //alert(val[i]);
-		 if($(contentTypeCheckBoxIdArray[index]).val()!= 'on'){
-		 if($(contentTypeCheckBoxIdArray[index]).is(':checked')){
-		 //alert("true");
-			checkedItemsArray[checkedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
-			checkedIndex++;
-		 }
-		 else {
-				//alert("uncheckItemArray");
-			uncheckItemArray[uncheckedIndex] = $(contentTypeCheckBoxIdArray[index]).val();
-			uncheckedIndex++;
-		}
-		}
-		
-	
-	    });
-		}
-		alert("Categories-checkedItemsArray .length = "+checkedItemsArray.length);
-		alert("Categories-uncheckItemArray .length = "+uncheckItemArray.length);
-		catIndex=0;
-		updateTagsForNewContents1();
-		//removeCategoriesForContents();
+                                for(index =0;index <  contentTypeCheckBoxIdArray.length;index++) {
+        //$('#filesTable input[type=checkbox]').each(function(i){
+                                $(contentTypeCheckBoxIdArray[index]).each(function(i){
+                                                
+                                val[i] = $(this).val();
+                                // alert(val[i]);
+                                if(val[i] != 'on'){
+                                if($(this).is(':checked')){
+                                //alert("true");
+                                                checkedItemsArray[checkedIndex] = $(this).val();
+                                                checkedIndex++;
+                                }
+                                else {
+                                                                // alert("false");
+                                                uncheckItemArray[uncheckedIndex] = $(this).val();
+                                                uncheckedIndex++;
+                                }
+                                }
+                                
+                
+                    });
+                                
+                                }
+                                alert("checkedItemsArray.length = "+checkedItemsArray.length);
+                                console.log("checkedItemsArray.length = "+checkedItemsArray.length);
+                                alert("uncheckItemArray.length = "+uncheckItemArray.length);
+                                console.log("uncheckItemArray.length = "+uncheckItemArray.length);
 
 		
 		}
