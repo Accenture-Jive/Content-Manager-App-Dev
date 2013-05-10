@@ -2935,7 +2935,7 @@ if(catIndex < checkedItemsArray.length) {
 						//alert("---cc-"+toUpdateTags[index]);
 						//console.log("---cc-"+toUpdateTags[index]);
 						updatedTagList[tempIndex]=toUpdateTags[index];
-						if(toUpdateTags[index] == selected_cat) {
+						if(toUpdateTags[index] == selected_tag) {
 						isTagExisting = true;
 						}
 						
