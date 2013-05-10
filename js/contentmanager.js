@@ -2915,6 +2915,10 @@ if(catIndex < checkedItemsArray.length) {
 	
 	//alert("contentURL got is ="+contentURL);
 	console.log("contentURL got is ="+contentURL);
+	alert("contentURL="+contentURL);
+	
+	if(contentURL != 'undefined')
+	{
 	osapi.jive.corev3.contents.get({
 	fields: '@all',	
 	uri: contentURL
@@ -2950,6 +2954,7 @@ if(catIndex < checkedItemsArray.length) {
 				//console.log("toUpdateTags = "+toUpdateTags);
 				
 				contentCatResponseObj.tags = updatedTagList;
+				                
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				
 				//console.log("updated --"+JSON.stringify(catUpdateResponse));
@@ -2966,6 +2971,7 @@ if(catIndex < checkedItemsArray.length) {
 				updateTagsForNewContents1();
 				
 			});
+			}
 
 }
 else {
