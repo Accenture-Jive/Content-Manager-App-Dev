@@ -2832,7 +2832,7 @@ function filterCheckedUncheckTagUrl(){
                                 //alert("uncheckItemArray.length = "+uncheckItemArray.length);
                                 //console.log("uncheckItemArray.length = "+uncheckItemArray.length);
 				catIndex = 0;
-		        //updateTagsForNewContents1();
+		        updateTagsForNewContents1();
 		
 		}
 
