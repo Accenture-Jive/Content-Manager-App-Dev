@@ -2425,6 +2425,8 @@ function filterCheckedUncheckCatgUrl(){
                                 console.log("checkedItemsArray.length = "+checkedItemsArray.length);
                                 alert("uncheckItemArray.length = "+uncheckItemArray.length);
                                 console.log("uncheckItemArray.length = "+uncheckItemArray.length);
+		catIndex=0;
+		updateCategoriesForNewContents1();		
 
 
 		
@@ -2816,7 +2818,8 @@ function filterCheckedUncheckTagUrl(){
                                 console.log("checkedItemsArray.length = "+checkedItemsArray.length);
                                 alert("uncheckItemArray.length = "+uncheckItemArray.length);
                                 console.log("uncheckItemArray.length = "+uncheckItemArray.length);
-
+		catIndex=0;
+		updateCategoriesForNewContents1();	
 		
 		}
 
