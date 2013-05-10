@@ -1,3 +1,8 @@
+var errorReferenceCatArray = new Array();
+var errorDeReferenceCatArray = new Array();
+var referenceCatArrayIndex =0;
+var deReferenceCatArrayIndex =0;
+
 //for categories
 var contentCheckedIndex =0;
 var contentUnCheckedIndex =0;
@@ -2555,6 +2560,12 @@ if(catIndex < checkedItemsArray.length) {
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				
 				//console.log("updated --"+JSON.stringify(catUpdateResponse));
+				if (catUpdateResponse.error){
+        errorReferenceCatArray[referenceCatArrayIndex] = contentCatResponseObj.resources.html.ref;
+        referenceCatArrayIndex++;
+        
+        }
+
 				
 				});
 				catIndex++;
@@ -2931,6 +2942,13 @@ if(catIndex < checkedItemsArray.length) {
 				contentCatResponseObj.update().execute(function(catUpdateResponse){
 				
 				//console.log("updated --"+JSON.stringify(catUpdateResponse));
+				
+				if (catUpdateResponse.error){
+        errorReferenceCatArray[referenceCatArrayIndex] = contentCatResponseObj.resources.html.ref;
+        referenceCatArrayIndex++;
+        
+        }
+
 				
 				});
 				catIndex++;
