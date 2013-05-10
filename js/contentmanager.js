@@ -2632,6 +2632,14 @@ if(catIndex < uncheckItemArray.length) {
 
 }
 else {
+            for(var index = 0;index < errorReferenceCatArray.length;index++) {
+              console.log("Could Not Reference "+errorReferenceCatArray[index]);
+            } 
+
+            for(var index = 0;index < errorDeReferenceCatArray.length;index++) {
+              console.log("Could Not De-Reference "+errorDeReferenceCatArray[index]);
+            }  
+
 	console.log("Category "+selected_cat+" succesfully updated");
 		//alert("Category "+selected_cat+" succesfully updated");
 		var tempRedirectionUrl = source_html_url+'/content?filterID=contentstatus[published]~category['+selected_cat+']';
@@ -3015,6 +3023,13 @@ if(catIndex < uncheckItemArray.length) {
 
 }
 else {
+            for(var index = 0;index < errorReferenceCatArray.length;index++) {
+              console.log("Could Not Reference "+errorReferenceCatArray[index]);
+            } 
+
+            for(var index = 0;index < errorDeReferenceCatArray.length;index++) {
+              console.log("Could Not De-Reference "+errorDeReferenceCatArray[index]);
+            }  
 	console.log("Category "+selected_cat+" succesfully updated");
 		//alert("Category "+selected_cat+" succesfully updated");
 		var tempRedirectionUrl = source_html_url+'/content?filterID=contentstatus[published]~tag['+selected_cat+']';
