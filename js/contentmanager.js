@@ -2818,8 +2818,8 @@ function filterCheckedUncheckTagUrl(){
                                 console.log("checkedItemsArray.length = "+checkedItemsArray.length);
                                 alert("uncheckItemArray.length = "+uncheckItemArray.length);
                                 console.log("uncheckItemArray.length = "+uncheckItemArray.length);
-		catIndex=0;
-		updateCategoriesForNewContents1();	
+				catIndex = 0;
+		        updateTagsForNewContents1();
 		
 		}
 
