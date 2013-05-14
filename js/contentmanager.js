@@ -4157,9 +4157,9 @@ var all_selected='';
 
 function goBack(){
 $("#selTag").show();
-//$('#selTag').text("Selected Tag");
-//$("#selTag").css("margin-left", "180px");
-//$("#selTag").css("margin-top", "135px");
+$('#selTag').text("Selected Tag");
+$("#selTag").css("margin-left", "180px");
+$("#selTag").css("margin-top", "135px");
 $("#add_tag").css("margin-left", "240px");
 $("#add_tag").css("margin-top", "155px");
 
@@ -4443,7 +4443,7 @@ $("#change_contents").hide();
 $("#button_div").hide();
 $("#tag_place").hide();
 $("#tag_sel").hide();
-$("#selTag").hide();
+//$("#selTag").hide();
 $("#tagTo").show();
 $("#tag_select_items_button").hide();
 
