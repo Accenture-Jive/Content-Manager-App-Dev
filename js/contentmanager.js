@@ -932,6 +932,7 @@ getBlogs(blog_url);
 
 function tagSel()
 {
+$('#selTag').text("Tag");
 var contentCheckedIndex =0;
 var contentUnCheckedIndex =0;
 var mainCheckedItems = new Array();
