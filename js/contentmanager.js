@@ -4156,6 +4156,11 @@ $("#blog_div").show();
 var all_selected=''; 
 
 function goBack(){
+$('#selTag').text("Selected Tag");
+$("#selTag").css("margin-left", "180px");
+$("#selTag").css("margin-top", "135px");
+$("#add_tag").css("margin-left", "240px");
+$("#add_tag").css("margin-top", "155px");
 // handles the code for creating the final selection tables and the list of values to be passed to the server/javascript
 if(sel_action_val=="categs")
 {
@@ -4453,7 +4458,7 @@ else
 {
 var iframe = '<iframe id="frame1"  style="width:650px;height:90px;margin-top:0px;font-family:Tahoma"></iframe>';
 document.getElementById("selected_items").innerHTML=iframe;  
-$("#tagTo").text("Updating this:");
+$("#tagTo").text("Updating Tags:");
 }
 
 if(browserName=="MSIE")
