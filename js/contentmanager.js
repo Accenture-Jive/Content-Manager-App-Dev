@@ -3049,6 +3049,16 @@ if(catIndex < uncheckItemArray.length) {
 
 }
 else {
+
+$("#src_place").show();
+$("#tag_place").show();
+$("#tag_from_space").hide();
+$("#tag_from_group").hide();
+$("#tag_from_project").hide();
+$("#selTag").hide();
+$("#tag_sel").hide();
+$("#add_tag_button").hide();
+
             for(var index = 0;index < errorReferenceCatArray.length;index++) {
               console.log("Could Not Reference "+errorReferenceCatArray[index]);
             } 
