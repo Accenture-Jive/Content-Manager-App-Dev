@@ -427,7 +427,7 @@ $('#select_items_button').hide();
 }
 }
 else if(sel_action_val=="download"){
-$('#dwn_place').css("margin-left", "250px");
+
 src_space_name='';
 dest_space_name='';
 $("#cmdu").text("Download");
