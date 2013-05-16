@@ -553,7 +553,7 @@ document.getElementById("tag_place").style.display="inline";
 $("#tag_place").show();
 $("#tagFrom").show();
 $("#del_place").css("margin-top", "110px");
-$('#tag_place').css("margin-top", "110px");
+//$('#tag_place').css("margin-top", "110px");
 $("#dwnFrom").hide();
 $("#del_place").hide();
 $("#dwn_from_space").hide();
@@ -1177,7 +1177,7 @@ categoryTest();
 else if(sel_action_val=="tags")
 {
 // actions when the user choses to download files.
-$('#tag_place').css("margin-top", "120px");
+//$('#tag_place').css("margin-top", "120px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#tagTo").text("Assign tag to this content:").append('<br/>');
@@ -1469,7 +1469,7 @@ categoryTest();
 else if(sel_action_val=="tags")
 {
 // actions when the user choses to download files.
-$('#tag_place').css("margin-top", "120px");
+//$('#tag_place').css("margin-top", "120px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#tagTo").text("Assign tag to this content:").append('<br/>');
@@ -1752,7 +1752,7 @@ else if(sel_action_val=="tags")
 {
 
 // actions when the user choses to download files.
-$('#tag_place').css("margin-top", "120px");
+//$('#tag_place').css("margin-top", "120px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#tagTo").text("Assign tag to this content:").append('<br/>');
