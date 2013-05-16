@@ -104,7 +104,6 @@ loggedUserName=response.name.formatted;
 
 function selected_action()
 {
-alert("select");
 // Check which action is selected by user copy/move/delete/upload/download &
 // hide show elements accordingly.
 var sel_action = document.getElementById("src_place");
@@ -427,7 +426,6 @@ $('#select_items_button').hide();
 }
 }
 else if(sel_action_val=="download"){
-
 src_space_name='';
 dest_space_name='';
 $("#cmdu").text("Download");
@@ -449,6 +447,7 @@ $("#del_place").hide();
 $("#dwn_place").show();
 //document.getElementById("del_place").style.display="inline";
 //document.getElementById("del_select_items_button").style.display="inline";
+document.getElementById("dwn_place").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 document.getElementById("up_place").style.display="inline";
 $("#del_place").css("margin-top", "110px");
@@ -484,7 +483,6 @@ $('#start_copying_button').val('Start Downloading');
 $('#start_copying_button').unbind('click').click(function(){startDownloading();});
 }
 else if(sel_action_val=="categs"){
-alert("select cat");
 src_space_name='';
 dest_space_name='';
 $("#catShow").show();
@@ -545,7 +543,6 @@ $('#start_copying_button').unbind('click').click(function(){startDeleting();});
 }
 
 else if(sel_action_val=="tags"){
-alert("select tag");
 src_space_name='';
 dest_space_name='';
 $("#tagShow").show();
@@ -1113,7 +1110,6 @@ $("#del_from_project").hide();
 }
 else if(sel_action_val=="download")
 {
-$('#dwn_place').css("margin-left", "250px");
 // actions when the user choses to download files.
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
@@ -1121,6 +1117,7 @@ $("#dwnTo").text("Download this:").append('<br/>');
 document.getElementById("dwnTo").style.display="inline";
 $("#dwnTo").show();
 $("#upTo").hide();
+document.getElementById("dwn_place").style.display="inline";
 document.getElementById("dwn_select_items_button").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 $("#dwn_select_items_button").show();
@@ -1407,7 +1404,6 @@ $("#del_from_project").hide();
 }
 else if(sel_action_val=="download")
 {
-$('#dwn_place').css("margin-left", "250px");
 // actions when user choses to download content.
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
@@ -1415,6 +1411,7 @@ $("#dwnTo").text("Download this:").append('<br/>');
 document.getElementById("dwnTo").style.display="inline";
 $("#dwnTo").show();
 $("#upTo").hide();
+document.getElementById("dwn_place").style.display="inline";
 document.getElementById("dwn_select_items_button").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 $("#dwn_select_items_button").show();
@@ -1686,7 +1683,6 @@ $("#del_from_space").hide();
 }
 else if(sel_action_val=="download")
 {
-$('#dwn_place').css("margin-left", "250px");
 // actions when the user choses to download.
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
@@ -1694,6 +1690,7 @@ $("#dwnTo").text("Download this:").append('<br/>');
 document.getElementById("dwnTo").style.display="inline";
 $("#dwnTo").show();
 $("#upTo").hide();
+document.getElementById("dwn_place").style.display="inline";
 document.getElementById("dwn_select_items_button").style.display="inline";
 document.getElementById("up_select_items_button").style.display="inline";
 $("#dwn_select_items_button").show();
@@ -3056,7 +3053,7 @@ if(catIndex < uncheckItemArray.length) {
 
 }
 else {
-alert("inside else");
+alert("inside else ");
 $("#src_place").show();
 $("#tag_place").show();
 $("#tag_from_space").hide();
