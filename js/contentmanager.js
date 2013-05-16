@@ -1167,7 +1167,7 @@ document.getElementById("cat_place").style.display="inline";
 $("#dwn_place").hide();
 $("#cat_place").show();
 document.getElementById("cat_from_space").innerHTML='<span id="myId" style="text-decoration:underline;">Space</span>'+': '+from_place_name;
-$("#cat_place").css("margin-top", "150px");
+$("#cat_place").css("margin-top", "40px");
 $("#cat_from_space").show();
 $("#cat_from_group").hide();
 $("#cat_from_project").hide();
@@ -1431,7 +1431,7 @@ $("#dwn_from_project").hide();
 else if(sel_action_val=="categs")
 {
 // actions when the user choses to download files.
-$('#cat_place').css("margin-top", "120px");
+//$('#cat_place').css("margin-top", "120px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#catTo").text("Categorize this:").append('<br/>');
@@ -1459,7 +1459,7 @@ document.getElementById("cat_place").style.display="inline";
 $("#dwn_place").hide();
 $("#cat_place").show();
 document.getElementById("cat_from_group").innerHTML='<span id="myId" style="text-decoration:underline;">Group</span>'+': '+from_place_name;
-$("#cat_place").css("margin-top", "150px");
+$("#cat_place").css("margin-top", "40px");
 $("#cat_from_space").hide();
 $("#cat_from_group").show();
 $("#cat_from_project").hide();
@@ -1713,7 +1713,7 @@ else if(sel_action_val=="categs")
 {
 
 // actions when the user choses to download files.
-$('#cat_place').css("margin-top", "120px");
+//$('#cat_place').css("margin-top", "120px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $("#catTo").text("Categorize this:").append('<br/>');
@@ -1741,7 +1741,7 @@ document.getElementById("cat_place").style.display="inline";
 $("#dwn_place").hide();
 $("#cat_place").show();
 document.getElementById("cat_from_project").innerHTML='<span id="myId" style="text-decoration:underline;">Project</span>'+': '+from_place_name;
-$("#cat_place").css("margin-top", "150px");
+$("#cat_place").css("margin-top", "40px");
 $("#cat_from_space").hide();
 $("#cat_from_group").hide();
 $("#cat_from_project").show();
