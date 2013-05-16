@@ -935,7 +935,7 @@ function tagSel()
 {
 $('#selTag').text("Tag");
 $("#selTag").css("margin-left", "180px");
-$("#selTag").css("margin-top", "170px");
+$("#selTag").css("margin-top", "80px");
 
 var contentCheckedIndex =0;
 var contentUnCheckedIndex =0;
