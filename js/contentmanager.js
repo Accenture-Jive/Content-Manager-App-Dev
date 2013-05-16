@@ -4438,6 +4438,7 @@ function startUpdatingTags() {
 
 $("#tagFrom").css("margin-left", "210px");
 $("#tagFrom").css("margin-top", "-290px");
+$("#tag_from_space").css("margin-top", "-250px");
 $("#selTag").show();
 $('#selTag').text("Selected Tag");
 $("#selTag").css("margin-left", "205px");
