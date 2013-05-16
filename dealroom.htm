@@ -207,6 +207,45 @@ style="display:none;margin-left:-80px;position:absolute; margin-top:110px;">
 </form >
 </tr>
 </div>
+
+<tr>
+<div>
+</div>
+</tr>
+
+<tr>
+<td colspan="2">
+<br/>
+<span id ="copyTo" style="text-align:left;font-weight:bold;margin-left:255px;"></span><br/>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<div id="button_div" style="display:none;font-family:Tahoma;overflow-y:auto;height:150px;">
+<input type="button" id="select_items_button" value="Select Contents" name="select_items" style="margin-left:220px;float:left;" onclick="javascript:showTab();javascript:highlightTab();"/>
+</div>
+<div id="change_selection_div" style="width:650px;display:none;font-family:Tahoma;margin-left:5px;">
+<br/>
+<div id="selected_items" style="margin-top:60px;font-family:Tahoma;overflow-y:auto;height:120px;">
+</div>
+<div>
+&nbsp;
+&nbsp;
+</div>
+<div id="newUpSel" style="float: left">
+<input type="button" value="Change Contents" id="change_contents" name="change_selected" style="float:left;" onclick="javascript:showTab();javascript:highlightTab();"/>
+<input type="button" id="start_copying_button" style="margin-left:100px;visibility:hidden; float:left" value="Start Copying" name="start_copying"/>
+<input type="button" id="start_uploading" style="margin-left:255px;visibility:hidden; float:left" value="Start Uploading" name="start_uploading" onclick="javascript:startUploading();"/>
+<br></br>
+
+</div>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
 <div id="catShow">
 <label id ="catFrom" style="display:none;margin-left:250px;position:absolute; margin-top:90px;"><br/>Manage Categories In:</label>
 <tr>
@@ -285,45 +324,6 @@ style="display:none;margin-left:-65px;position:absolute; margin-top:110px;">
 <tr>
 </tr>
 </div>
-<tr>
-<div>
-</div>
-</tr>
-
-<tr>
-<td colspan="2">
-<br/>
-<span id ="copyTo" style="text-align:left;font-weight:bold;margin-left:255px;"></span><br/>
-</td>
-</tr>
-
-<tr>
-<td colspan="2">
-<div id="button_div" style="display:none;font-family:Tahoma;overflow-y:auto;height:150px;">
-<input type="button" id="select_items_button" value="Select Contents" name="select_items" style="margin-left:220px;float:left;" onclick="javascript:showTab();javascript:highlightTab();"/>
-</div>
-<div id="change_selection_div" style="width:650px;display:none;font-family:Tahoma;margin-left:5px;">
-<br/>
-<div id="selected_items" style="margin-top:60px;font-family:Tahoma;overflow-y:auto;height:120px;">
-</div>
-<div>
-&nbsp;
-&nbsp;
-</div>
-<div id="newUpSel" style="float: left">
-<input type="button" value="Change Contents" id="change_contents" name="change_selected" style="float:left;" onclick="javascript:showTab();javascript:highlightTab();"/>
-<input type="button" id="start_copying_button" style="margin-left:100px;visibility:hidden; float:left" value="Start Copying" name="start_copying"/>
-<input type="button" id="start_uploading" style="margin-left:255px;visibility:hidden; float:left" value="Start Uploading" name="start_uploading" onclick="javascript:startUploading();"/>
-<br></br>
-
-</div>
-</div>
-</td>
-</tr>
-</table>
-
-</div>
-
 <div id="selection_menu" class="myform" style="
 display:box;
 box-pack:center;
