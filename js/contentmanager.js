@@ -4436,6 +4436,8 @@ function startUpdatingTags() {
 	//alert("tag selectionn....");
 	//alert("browserName = "+browserName);
 
+$("#tagFrom").css("margin-left", "210px");
+$("#tagFrom").css("margin-top", "-290px");
 $("#selTag").show();
 $('#selTag').text("Selected Tag");
 $("#selTag").css("margin-left", "205px");
