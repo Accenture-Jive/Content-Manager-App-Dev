@@ -104,6 +104,7 @@ loggedUserName=response.name.formatted;
 
 function selected_action()
 {
+alert("select");
 // Check which action is selected by user copy/move/delete/upload/download &
 // hide show elements accordingly.
 var sel_action = document.getElementById("src_place");
@@ -482,6 +483,7 @@ $('#start_copying_button').val('Start Downloading');
 $('#start_copying_button').unbind('click').click(function(){startDownloading();});
 }
 else if(sel_action_val=="categs"){
+alert("select cat");
 src_space_name='';
 dest_space_name='';
 $("#catShow").show();
@@ -542,6 +544,7 @@ $('#start_copying_button').unbind('click').click(function(){startDeleting();});
 }
 
 else if(sel_action_val=="tags"){
+alert("select tag");
 src_space_name='';
 dest_space_name='';
 $("#tagShow").show();
