@@ -427,6 +427,7 @@ $('#select_items_button').hide();
 }
 }
 else if(sel_action_val=="download"){
+$('#dwn_place').css("margin-left", "250px");
 src_space_name='';
 dest_space_name='';
 $("#cmdu").text("Download");
@@ -1112,6 +1113,7 @@ $("#del_from_project").hide();
 }
 else if(sel_action_val=="download")
 {
+$('#dwn_place').css("margin-left", "250px");
 // actions when the user choses to download files.
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
@@ -1405,6 +1407,7 @@ $("#del_from_project").hide();
 }
 else if(sel_action_val=="download")
 {
+$('#dwn_place').css("margin-left", "250px");
 // actions when user choses to download content.
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
@@ -1683,6 +1686,7 @@ $("#del_from_space").hide();
 }
 else if(sel_action_val=="download")
 {
+$('#dwn_place').css("margin-left", "250px");
 // actions when the user choses to download.
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
