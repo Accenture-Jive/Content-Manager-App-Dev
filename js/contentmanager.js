@@ -937,7 +937,7 @@ $("#catTo").hide();
 else
 {
 $("#cat_select_items_button").show();
-$('#catTo').css("margin-top", "225px");
+$('#catTo').css("margin-top", "80px");
 //$('#cat_sel').css("margin-left", "75px");
 $("#catTo").show();
 getDocs(space_url);
