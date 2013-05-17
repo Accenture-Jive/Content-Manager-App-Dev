@@ -1192,7 +1192,7 @@ document.getElementById("cat_place").style.display="inline";
 $("#dwn_place").hide();
 $("#cat_place").show();
 document.getElementById("cat_from_space").innerHTML='<span id="myId" style="text-decoration:underline;">Space</span>'+': '+from_place_name;
-$("#cat_place").css("margin-top", "150px");
+//$("#cat_place").css("margin-top", "20px");
 $("#cat_from_space").show();
 $("#cat_from_group").hide();
 $("#cat_from_project").hide();
