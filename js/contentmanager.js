@@ -3069,7 +3069,13 @@ if(catIndex < checkedItemsArray.length) {
 					//console.log(contentCatResponseObj.tags);
 					//alert("selected_cat = "+selected_cat);
 				toUpdateTags = contentCatResponseObj.tags;
-				
+				var str='Applying category '+selected_cat+' to '+contentCatResponseObj.type+'';
+				for(index =0;index < dotIndex;index++) 
+					str = str +'.';
+					dotIndex++;
+				if(dotIndex == 4) dotIndex = 0;
+				document.getElementById("frame1").contentDocument.body.innerHTML = "Applying tags in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+
 				var tempIndex =0;
 				for(var index=0;index < toUpdateTags.length;index++,tempIndex++) {
 						//alert("---cc-"+toUpdateTags[index]);
