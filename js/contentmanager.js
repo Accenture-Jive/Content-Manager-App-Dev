@@ -1159,7 +1159,7 @@ $("#dwn_from_project").hide();
 else if(sel_action_val=="categs")
 {
 // actions when the user choses to download files.
-$('#cat_place').css("margin-top", "130px");
+$('#cat_place').css("margin-top", "20px");
 $('#cat_place').css("margin-left", "-75px");
 $('#cat_sel').css("margin-left", "-75px");
 $("#cat_sel option").each(function() {
