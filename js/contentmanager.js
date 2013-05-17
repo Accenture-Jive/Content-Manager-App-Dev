@@ -3181,8 +3181,7 @@ else {
 			$("#tag_from_group").hide();
 			$("#tag_from_project").hide();
 			$("#selTag").show();
-			$('#selTag').css("margin-top", "-235px");
-			$('#selTag').css("margin-left", "250px");
+			
 			$("#tag_sel").show();
 			$("#add_tag_button").show();
 
