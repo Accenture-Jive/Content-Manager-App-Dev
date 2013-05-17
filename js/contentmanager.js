@@ -1042,6 +1042,8 @@ getBlogs(blog_url);
 function tagSel()
 {
 $("#tag_select_items_button").show();
+$("#tag_select_items_button").css("margin-left", "180px");
+$("#tag_select_items_button").css("margin-top", "80px");
 $('#selTag').text("Tag");
 $("#selTag").css("margin-left", "180px");
 $("#selTag").css("margin-top", "80px");
