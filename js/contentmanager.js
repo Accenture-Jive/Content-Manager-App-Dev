@@ -1044,6 +1044,8 @@ function tagSel()
 $('#selTag').text("Tag");
 $("#selTag").css("margin-left", "180px");
 $("#selTag").css("margin-top", "80px");
+$('#selTag').show();
+selected_cat = '';
 
 var contentCheckedIndex =0;
 var contentUnCheckedIndex =0;
@@ -3214,7 +3216,7 @@ else {
             for(var index = 0;index < errorDeReferenceCatArray.length;index++) {
               console.log("Could Not De-Reference "+errorDeReferenceCatArray[index]);
             }  
-	console.log("Category "+selected_cat+" succesfully updated");
+	console.log("tag "+selected_cat+" succesfully updated");
 		//alert("Category "+selected_cat+" succesfully updated");
 		var tempRedirectionUrl = source_html_url+'/content?filterID=contentstatus[published]~tag['+selected_cat+']';
 		
