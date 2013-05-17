@@ -3174,13 +3174,18 @@ if(catIndex < uncheckItemArray.length) {
 else {
 alert("inside else ");
 $("#src_place").show();
-$("#tag_place").show();
-$("#tag_from_space").hide();
-$("#tag_from_group").hide();
-$("#tag_from_project").hide();
-$("#selTag").hide();
-$("#tag_sel").hide();
-$("#add_tag_button").hide();
+      $("#tag_place").show();
+      $('#tag_place').css("margin-top", "-235px");
+      $('#tag_place').css("margin-left", "250px");
+      $("#tag_from_space").show();
+      $("#tag_from_group").hide();
+      $("#tag_from_project").hide();
+      $("#selTag").show();
+      $('#selTag').css("margin-top", "-235px");
+      $('#selTag').css("margin-left", "250px");
+      $("#tag_sel").show();
+      $("#add_tag_button").show();
+
 
             for(var index = 0;index < errorReferenceCatArray.length;index++) {
               console.log("Could Not Reference "+errorReferenceCatArray[index]);
