@@ -1059,6 +1059,7 @@ arrayIndex=0;
 selected_tag=$('#tag_sel').val();
 if (selected_tag=="val1")
 {
+alert("zxzadszsdcczxc");
 $("#tag_select_items_button").hide();
 $("#tagTo").hide();
 }
