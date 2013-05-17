@@ -4442,7 +4442,7 @@ $('#catTo').css("margin-top", "170px");
 $("#catTo").show();
 $("#catTo").text("Manage content for this category:");
 $("#cat_select_items_button").hide();
-
+alert("ssds");
 
 
 $("#selected_items").show();
