@@ -3142,6 +3142,13 @@ if(catIndex < uncheckItemArray.length) {
 				
 					//alert(contentCatResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
+				var str='Removing category '+selected_cat+' to '+contentCatResponseObj.type+'';
+				for(index =0;index < dotIndex;index++) 
+					str = str +'.';
+					dotIndex++;
+				if(dotIndex == 4) dotIndex = 0;
+				document.getElementById("frame1").contentDocument.body.innerHTML = "Removing tags in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+
 				toUpdateTags = contentCatResponseObj.tags;
 				//toUpdateTags = toUpdateTags+','+selected_cat;
 				//toUpdateTags = ["cat1","cat2","cat3"];
