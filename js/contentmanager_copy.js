@@ -3172,7 +3172,6 @@ if(catIndex < uncheckItemArray.length) {
 
 }
 else {
-
 			alert("inside else ");
 			$("#src_place").show();
 			$("#tag_place").show();
