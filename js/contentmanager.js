@@ -1041,9 +1041,6 @@ getBlogs(blog_url);
 
 function tagSel()
 {
-$("#tag_select_items_button").show();
-$("#tag_select_items_button").css("margin-left", "180px");
-$("#tag_select_items_button").css("margin-top", "80px");
 $('#selTag').text("Tag");
 $("#selTag").css("margin-left", "180px");
 $("#selTag").css("margin-top", "80px");
@@ -1059,29 +1056,25 @@ catSelection = true;
 arrayIndex=0;
 //put the selected category to further use
 selected_tag=$('#tag_sel').val();
-alert("selected_tag = "+selected_tag);
 if (selected_tag=="val1")
 {
-alert("zxzadszsdcczxc");
 $("#tag_select_items_button").hide();
 $("#tagTo").hide();
 }
 else
 {
-alert("asadadadadadada");
 $("#tag_select_items_button").show();
 $("#tagTo").show();
 $("#add_tag_button").hide();
 $("#tag_sel").hide();
-$("#frame1").hide();
 document.getElementById("add_tag").innerHTML=$('#tag_sel').val();
 $("#add_tag").show();
-/*getDocs(space_url);
+getDocs(space_url);
 getFiles(space_url);
 getDiscussions(space_url);
 getIdeas(space_url);
 getPolls(space_url);
-getBlogs(blog_url);*/
+getBlogs(blog_url);
 }
 
 }
