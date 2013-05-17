@@ -3184,11 +3184,11 @@ else {
 			$('#selTag').css("margin-top", "-200px");
 			$('#selTag').css("margin-left", "200px");
 			$("#selTag").show();
-			$('#tag_sel').css("margin-top", "-200px");
+			$('#tag_sel').css("margin-top", "-190px");
 			$('#tag_sel').css("margin-left", "250px");
 			$("#tag_sel").show();
-			$('#add_tag_button').css("margin-top", "-200px");
-			$('#add_tag_button').css("margin-left", "200px");
+			$('#add_tag_button').css("margin-top", "-190px");
+			$('#add_tag_button').css("margin-left", "390px");
 			$("#add_tag_button").show();
 
             for(var index = 0;index < errorReferenceCatArray.length;index++) {
@@ -3208,8 +3208,8 @@ else {
 			});*/
 			
 		/*document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+"'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";*/
-		var str='Updating categories is completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.';
-		document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+		var str='Updating tags is completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.';
+		document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 		
 		
 }
