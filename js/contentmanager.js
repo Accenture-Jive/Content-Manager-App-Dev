@@ -1041,6 +1041,7 @@ getBlogs(blog_url);
 
 function tagSel()
 {
+$("#tag_select_items_button").show();
 $('#selTag').text("Tag");
 $("#selTag").css("margin-left", "180px");
 $("#selTag").css("margin-top", "80px");
@@ -1070,8 +1071,6 @@ $("#add_tag_button").hide();
 $("#tag_sel").hide();
 $("#frame1").hide();
 document.getElementById("add_tag").innerHTML=$('#tag_sel').val();
-$("#add_tag").css("margin-left", "180px");
-$("#add_tag").css("margin-top", "80px");
 $("#add_tag").show();
 getDocs(space_url);
 getFiles(space_url);
