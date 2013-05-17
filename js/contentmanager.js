@@ -3172,35 +3172,36 @@ if(catIndex < uncheckItemArray.length) {
 
 }
 else {
-alert("inside else ");
-$("#src_place").show();
-$("#tag_place").show();
-$("#tag_from_space").hide();
-$("#tag_from_group").hide();
-$("#tag_from_project").hide();
-$("#selTag").hide();
-$("#tag_sel").hide();
-$("#add_tag_button").hide();
 
-            for(var index = 0;index < errorReferenceCatArray.length;index++) {
-              console.log("Could Not Reference "+errorReferenceCatArray[index]);
-            } 
 
-            for(var index = 0;index < errorDeReferenceCatArray.length;index++) {
-              console.log("Could Not De-Reference "+errorDeReferenceCatArray[index]);
-            }  
-	console.log("Category "+selected_cat+" succesfully updated");
-		//alert("Category "+selected_cat+" succesfully updated");
-		var tempRedirectionUrl = source_html_url+'/content?filterID=contentstatus[published]~tag['+selected_cat+']';
-		
-		console.log("temRedirectionUrl = "+tempRedirectionUrl);
-		/*$("#stylized").fadeOut(5000,function(){
-		window.location = window.location = tempRedirectionUrl;
-			});*/
-			
-		/*document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+"'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";*/
-		var str='Updating categories is completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.';
-		document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+
+                                console.log("Tag "+selected_tag+" succesfully updated");
+                                //alert("Category "+selected_cat+" succesfully updated");
+                                var tempRedirectionUrl = source_html_url+'/content?filterID=contentstatus[published]~tag['+selected_tag+']';
+
+                                console.log("temRedirectionUrl = "+tempRedirectionUrl);
+                                /*$("#stylized").fadeOut(5000,function(){
+                                window.location = window.location = tempRedirectionUrl;
+                                                });*/
+
+                                /*document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+"'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";*/
+                /*           var str='Updating categories has completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  to review the result.';
+                                document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";*/
+                                $('#cmdu').hide();
+                                $('#src_place').show();
+                                $('#tag_place').show();
+                                $('#selTag').show();
+                                $('#tag_sel').show();
+                                $('#tagTo').show();
+                                $('#tagTo').text('Manage content for this Tag:');
+                                $('#tag_select_items_button').show();
+                                $('#tag_place').css("margin-left", "250px");
+                                $('#tag_sel').css("margin-left", "250px");
+                                $('#selected_items').css("margin-top", "135px");
+                                $('#tagTo').css("margin-top", "230px");
+                                var str='Updating tags has completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  to review the result.';
+                                document.getElementById("frame1").contentDocument.body.innerHTML = "Note:<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+
 		
 		
 }
