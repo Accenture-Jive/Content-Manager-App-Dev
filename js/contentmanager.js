@@ -496,6 +496,7 @@ dest_space_name='';
 $("#catShow").show();
 $("#tagShow").hide();
 $("#deleteTo").hide();
+$('#cat_place').css("margin-top", "0px");
 $("#cat_select_items_button").hide();
 document.getElementById("cat_place").style.display="inline";
 $("#cat_place").show();
