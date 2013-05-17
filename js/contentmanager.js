@@ -1072,12 +1072,12 @@ $("#tag_sel").hide();
 $("#frame1").hide();
 document.getElementById("add_tag").innerHTML=$('#tag_sel').val();
 $("#add_tag").show();
-getDocs(space_url);
+/*getDocs(space_url);
 getFiles(space_url);
 getDiscussions(space_url);
 getIdeas(space_url);
 getPolls(space_url);
-getBlogs(blog_url);
+getBlogs(blog_url);*/
 }
 
 }
