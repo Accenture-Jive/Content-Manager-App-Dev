@@ -495,7 +495,7 @@ $("#cat_place").show();
 $("#tag_place").hide();
 $("#catFrom").show();
 $("#del_place").css("margin-top", "110px");
-$('#cat_place').css("margin-top", "50px");
+$('#cat_place').css("margin-top", "-10px");
 
 $('#cat_place').css("margin-left", "-70px");
 $("#dwnFrom").hide();
