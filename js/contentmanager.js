@@ -1057,6 +1057,7 @@ catSelection = true;
 arrayIndex=0;
 //put the selected category to further use
 selected_tag=$('#tag_sel').val();
+alert("selected_tag = "+selected_tag);
 if (selected_tag=="val1")
 {
 alert("zxzadszsdcczxc");
