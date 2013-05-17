@@ -4384,6 +4384,13 @@ function startUpdatingCategories() {
 	//alert("catagory selectionn....");
 	//alert("browserName = "+browserName);
 
+$("#catFrom").css("margin-top", "-290px");
+$("#cat_from_space").css("margin-left", "200px");
+$("#cat_from_group").css("margin-left", "200px");
+$("#cat_from_project").css("margin-left", "200px");
+$("#cat_from_space").css("margin-top", "-250px");
+$("#cat_from_group").css("margin-top", "-250px");
+$("#cat_from_project").css("margin-top", "-250px");
 
 $("#selection_menu").hide();
 $("#stylized").show();
@@ -4463,6 +4470,8 @@ function startUpdatingTags() {
 $("#tagFrom").css("margin-left", "210px");
 $("#tagFrom").css("margin-top", "-290px");
 $("#tag_from_space").css("margin-top", "-250px");
+$("#tag_from_group").css("margin-top", "-250px");
+$("#tag_from_project").css("margin-top", "-250px");
 $("#selTag").show();
 $('#selTag').text("Selected Tag");
 $("#selTag").css("margin-left", "205px");
