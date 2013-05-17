@@ -1753,7 +1753,7 @@ else if(sel_action_val=="categs")
 {
 
 // actions when the user choses to download files.
-$('#cat_place').css("margin-top", "120px");
+$('#cat_place').css("margin-top", "20px");
 $('#all_selected_items').css("margin-top", "80px");
 $('#selected_items').css("margin-top", "80px");
 $('#cat_place').css("margin-left", "-80px");
