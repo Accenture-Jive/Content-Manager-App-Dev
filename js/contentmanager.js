@@ -3183,8 +3183,8 @@ else {
 			$('#selTag').css("margin-top", "-200px");
 			$('#selTag').css("margin-left", "200px");
 			$("#selTag").show();
-			$('#tag_sel').css("margin-top", "-180px");
-			$('#tag_sel').css("margin-left", "200px");
+			$('#tag_sel').css("margin-top", "-200px");
+			$('#tag_sel').css("margin-left", "250px");
 			$("#tag_sel").show();
 			$('#tag_sel').css("margin-top", "-200px");
 			$('#tag_sel').css("margin-left", "200px");
