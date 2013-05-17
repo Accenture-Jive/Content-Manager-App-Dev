@@ -4480,12 +4480,39 @@ function startUpdatingCategories() {
 	//alert("browserName = "+browserName);
 
 $("#catFrom").css("margin-top", "-290px");
+$("#catFrom").show();
 $("#cat_from_space").css("margin-left", "200px");
 $("#cat_from_group").css("margin-left", "200px");
 $("#cat_from_project").css("margin-left", "200px");
 $("#cat_from_space").css("margin-top", "-250px");
 $("#cat_from_group").css("margin-top", "-250px");
 $("#cat_from_project").css("margin-top", "-250px");
+
+$("#selection_menu").hide();
+$("#stylized").show();
+$("#change_selection_div").show();
+$("#change_contents").hide();
+$("#start_copying_button").hide();
+
+$("#cat_select_items_button").show();
+$("#cmdu").show();
+$("#src_place").show();
+$("#cat_place").show();
+$("#cat_sel").show();
+$("#catTo").text("Manage content for this category:");
+
+$("#cmdu").show();
+$("#cmdu").text("Manage Categories");
+$("#src_place").show();
+$("#start_copying_button").hide();
+$("#change_contents").hide();
+$("#button_div").hide();
+$("#cat_place").show();
+$("#cat_sel").show();
+$("#selCat").hide();
+$("#catTo").show();
+$("#cat_select_items_button").hide();
+	
 
 $("#selection_menu").hide();
 $("#stylized").show();
