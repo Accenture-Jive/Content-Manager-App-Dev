@@ -1063,6 +1063,7 @@ $("#tagTo").hide();
 }
 else
 {
+alert("asadadadadadada");
 $("#tag_select_items_button").show();
 $("#tagTo").show();
 $("#add_tag_button").hide();
