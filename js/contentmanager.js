@@ -2,6 +2,7 @@ var errorReferenceCatArray = new Array();
 var errorDeReferenceCatArray = new Array();
 var referenceCatArrayIndex =0;
 var deReferenceCatArrayIndex =0;
+var dotIndex  =0;
 
 //for categories
 var contentCheckedIndex =0;
@@ -2959,6 +2960,7 @@ function filterCheckedUncheckTagUrl(){
                                 //alert("uncheckItemArray.length = "+uncheckItemArray.length);
                                 //console.log("uncheckItemArray.length = "+uncheckItemArray.length);
 				catIndex = 0;
+				dotIndex = 0;
 		        updateTagsForNewContents1();
 		
 		}
@@ -3122,6 +3124,7 @@ if(catIndex < checkedItemsArray.length) {
 }
 else {
 catIndex = 0;
+dotIndex=0;
 removeTagsForContents();
 }
 
