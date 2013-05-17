@@ -3186,7 +3186,6 @@ $("#src_place").show();
       $("#tag_sel").show();
       $("#add_tag_button").show();
 
-
             for(var index = 0;index < errorReferenceCatArray.length;index++) {
               console.log("Could Not Reference "+errorReferenceCatArray[index]);
             } 
