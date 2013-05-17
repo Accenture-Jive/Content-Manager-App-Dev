@@ -3180,9 +3180,14 @@ else {
 			$("#tag_from_space").show();
 			$("#tag_from_group").hide();
 			$("#tag_from_project").hide();
+			$('#selTag').css("margin-top", "-200px");
+			$('#selTag').css("margin-left", "200px");
 			$("#selTag").show();
-			
+			$('#tag_sel').css("margin-top", "-180px");
+			$('#tag_sel').css("margin-left", "200px");
 			$("#tag_sel").show();
+			$('#tag_sel').css("margin-top", "-200px");
+			$('#tag_sel').css("margin-left", "200px");
 			$("#add_tag_button").show();
 
             for(var index = 0;index < errorReferenceCatArray.length;index++) {
