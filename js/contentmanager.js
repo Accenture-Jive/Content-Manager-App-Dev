@@ -1069,6 +1069,7 @@ $("#add_tag_button").hide();
 $("#tag_sel").hide();
 document.getElementById("add_tag").innerHTML=$('#tag_sel').val();
 $("#add_tag").show();
+alert("Break point 1");
 getDocs(space_url);
 getFiles(space_url);
 getDiscussions(space_url);
