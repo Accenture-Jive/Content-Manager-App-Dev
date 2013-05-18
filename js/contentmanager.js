@@ -1067,6 +1067,8 @@ $("#tagTo").show();
 $("#tag_select_items_button").show();
 
 $("#add_tag_button").hide();
+$("#selTag").show();
+
 $("#tag_sel").hide();
 document.getElementById("add_tag").innerHTML=$('#tag_sel').val();
 $("#add_tag").show();
