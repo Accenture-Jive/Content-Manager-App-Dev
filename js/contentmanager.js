@@ -1063,10 +1063,11 @@ $("#tagTo").hide();
 }
 else
 {
-$("#tag_select_items_button").show();
 $("#tagTo").show();
-$("#add_tag_button").show();
-$("#tag_sel").show();
+$("#tag_select_items_button").show();
+
+$("#add_tag_button").hide();
+$("#tag_sel").hide();
 document.getElementById("add_tag").innerHTML=$('#tag_sel').val();
 $("#add_tag").show();
 alert("Break point 1");
