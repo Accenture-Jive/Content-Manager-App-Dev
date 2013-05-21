@@ -2,7 +2,6 @@ var errorReferenceCatArray = new Array();
 var errorDeReferenceCatArray = new Array();
 var referenceCatArrayIndex =0;
 var deReferenceCatArrayIndex =0;
-var dotIndex  =0;
 
 //for categories
 var contentCheckedIndex =0;
@@ -1044,8 +1043,6 @@ function tagSel()
 $('#selTag').text("Tag");
 $("#selTag").css("margin-left", "180px");
 $("#selTag").css("margin-top", "80px");
-$('#selTag').show();
-selected_cat = '';
 
 var contentCheckedIndex =0;
 var contentUnCheckedIndex =0;
@@ -1063,16 +1060,12 @@ $("#tagTo").hide();
 }
 else
 {
-$("#tagTo").show();
 $("#tag_select_items_button").show();
-
+$("#tagTo").show();
 $("#add_tag_button").hide();
-$("#selTag").show();
-
 $("#tag_sel").hide();
 document.getElementById("add_tag").innerHTML=$('#tag_sel').val();
 $("#add_tag").show();
-alert("Break point 1");
 getDocs(space_url);
 getFiles(space_url);
 getDiscussions(space_url);
@@ -2966,7 +2959,6 @@ function filterCheckedUncheckTagUrl(){
                                 //alert("uncheckItemArray.length = "+uncheckItemArray.length);
                                 //console.log("uncheckItemArray.length = "+uncheckItemArray.length);
 				catIndex = 0;
-				dotIndex = 0;
 		        updateTagsForNewContents1();
 		
 		}
@@ -3077,13 +3069,7 @@ if(catIndex < checkedItemsArray.length) {
 					//console.log(contentCatResponseObj.tags);
 					//alert("selected_cat = "+selected_cat);
 				toUpdateTags = contentCatResponseObj.tags;
-				var str='Applying category '+selected_cat+' to '+contentCatResponseObj.type+'';
-				for(index =0;index < dotIndex;index++) 
-					str = str +'.';
-					dotIndex++;
-				if(dotIndex == 4) dotIndex = 0;
-				document.getElementById("frame1").contentDocument.body.innerHTML = "Applying tags in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
-
+				
 				var tempIndex =0;
 				for(var index=0;index < toUpdateTags.length;index++,tempIndex++) {
 						//alert("---cc-"+toUpdateTags[index]);
@@ -3130,7 +3116,6 @@ if(catIndex < checkedItemsArray.length) {
 }
 else {
 catIndex = 0;
-dotIndex=0;
 removeTagsForContents();
 }
 
@@ -3157,13 +3142,6 @@ if(catIndex < uncheckItemArray.length) {
 				
 					//alert(contentCatResponseObj.categories);
 					//alert("selected_cat = "+selected_cat);
-				var str='Removing category '+selected_cat+' to '+contentCatResponseObj.type+'';
-				for(index =0;index < dotIndex;index++) 
-					str = str +'.';
-					dotIndex++;
-				if(dotIndex == 4) dotIndex = 0;
-				document.getElementById("frame1").contentDocument.body.innerHTML = "Removing tags in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
-
 				toUpdateTags = contentCatResponseObj.tags;
 				//toUpdateTags = toUpdateTags+','+selected_cat;
 				//toUpdateTags = ["cat1","cat2","cat3"];
@@ -3194,7 +3172,6 @@ if(catIndex < uncheckItemArray.length) {
 
 }
 else {
-
 			alert("inside else ");
 			$("#src_place").show();
 			$("#tag_place").show();
@@ -3206,11 +3183,11 @@ else {
 			$('#selTag').css("margin-top", "-200px");
 			$('#selTag').css("margin-left", "200px");
 			$("#selTag").show();
-			$('#tag_sel').css("margin-top", "-190px");
+			$('#tag_sel').css("margin-top", "-200px");
 			$('#tag_sel').css("margin-left", "250px");
 			$("#tag_sel").show();
-			$('#add_tag_button').css("margin-top", "-190px");
-			$('#add_tag_button').css("margin-left", "390px");
+			$('#tag_sel').css("margin-top", "-200px");
+			$('#tag_sel').css("margin-left", "200px");
 			$("#add_tag_button").show();
 
             for(var index = 0;index < errorReferenceCatArray.length;index++) {
@@ -3220,7 +3197,7 @@ else {
             for(var index = 0;index < errorDeReferenceCatArray.length;index++) {
               console.log("Could Not De-Reference "+errorDeReferenceCatArray[index]);
             }  
-	console.log("tag "+selected_cat+" succesfully updated");
+	console.log("Category "+selected_cat+" succesfully updated");
 		//alert("Category "+selected_cat+" succesfully updated");
 		var tempRedirectionUrl = source_html_url+'/content?filterID=contentstatus[published]~tag['+selected_cat+']';
 		
@@ -3230,8 +3207,8 @@ else {
 			});*/
 			
 		/*document.getElementById("frame1").contentDocument.body.innerHTML = "Updating is in Progress.<br>Please leave this window open until the updating process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+"'Moving completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.'.fontcolor("#3778C7")+"</span>";*/
-		var str='Updating tags is completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.';
-		document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+		var str='Updating categories is completed. Please click   <a href='+tempRedirectionUrl+'>here </a>  for the new location of your content.';
+		document.getElementById("frame1").contentDocument.body.innerHTML = "Updating Categories in Progress.<br>Please leave this window open until the moving process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 		
 		
 }
@@ -4778,19 +4755,7 @@ if (pos!=-1)
 // redirects to target place when the final message is received.
 document.getElementById("frame1").contentDocument.body.innerHTML = "Copying in Progress.<br>Please leave this window open until the copying process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 $("#stylized").fadeOut(5000,function(){
-alert('copy complete');
-
-$("#from_label").show();
-$("#to_label").show();
-
-$("#from_place").show();
-$("#to_place").show();
-$('#to_place').prop('disabled', 'disabled');
-var finalurl=redirection_url+'/content';
-var str='Copying completed. Please click   <a href='+finalurl+'>here </a>  for the new location of your content.';
-document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
-
-//window.location = redirection_url+'/content';
+window.location = redirection_url+'/content';
 });
 }
 }
