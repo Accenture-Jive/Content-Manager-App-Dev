@@ -4812,7 +4812,7 @@ $("#to_label").show();
 $("#from_place").show();
 $("#to_place").show();
 $("#select_items_button").show();
-
+$("#copyTo").text("Copy this:");
 //$('#to_place').prop('disabled', 'disabled');
 var finalurl=redirection_url+'/content';
 var str='Copying completed. Please click   <a href='+finalurl+'>here </a>  for the new location of your content.';
