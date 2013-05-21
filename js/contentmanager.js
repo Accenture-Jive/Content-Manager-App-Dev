@@ -4778,24 +4778,8 @@ if (pos!=-1)
 // redirects to target place when the final message is received.
 document.getElementById("frame1").contentDocument.body.innerHTML = "Copying in Progress.<br>Please leave this window open until the copying process has been completed.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 $("#stylized").fadeOut(5000,function(){
-alert('copy complete');
+//enable copy action again
 
-$("#from_label").show();
-$("#to_label").show();
-
-$("#from_place").show();
-$("#to_place").show();
-$('#to_place').prop('disabled', 'disabled');
-var finalurl=redirection_url+'/content';
-var str='Copying completed. Please click   <a href='+finalurl+'>here </a>  for the new location of your content.';
-document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
-
-//window.location = redirection_url+'/content';
-});
-}
-}
-else
-{
 $("#src_place").show();
 $('.src_place option:eq(2)').prop('selected', true);
 $("#cmdu").hide();
@@ -4804,11 +4788,33 @@ $("#to_label").show();
 
 $("#from_place").show();
 $("#to_place").show();
-$('#to_place').prop('disabled', 'disabled');
+//$('#to_place').prop('disabled', 'disabled');
 var finalurl=redirection_url+'/content';
 var str='Copying completed. Please click   <a href='+finalurl+'>here </a>  for the new location of your content.';
 document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
 
+//end enabling copy action
+
+//window.location = redirection_url+'/content';
+});
+}
+}
+else
+{
+/*
+$("#src_place").show();
+$('.src_place option:eq(2)').prop('selected', true);
+$("#cmdu").hide();
+$("#from_label").show();
+$("#to_label").show();
+
+$("#from_place").show();
+$("#to_place").show();
+//$('#to_place').prop('disabled', 'disabled');
+var finalurl=redirection_url+'/content';
+var str='Copying completed. Please click   <a href='+finalurl+'>here </a>  for the new location of your content.';
+document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
+*/
 var serverMsg = "Server is stopped/down, check with the administrator.";
 document.getElementById("frame1").contentDocument.body.innerHTML = "<br><br><span id='mySpan' style='font-weight:bold;'>"+serverMsg.fontcolor("#3778C7")+"</span>";
 }	
