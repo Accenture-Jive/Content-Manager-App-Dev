@@ -4796,9 +4796,9 @@ document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br
 }
 else
 {
-
-alert('copy complete');
-
+$("#src_place").show();
+$('.src_place option:eq(2)').prop('selected', true);
+$("#cmdu").hide();
 $("#from_label").show();
 $("#to_label").show();
 
