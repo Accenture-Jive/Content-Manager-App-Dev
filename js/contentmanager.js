@@ -4801,7 +4801,8 @@ document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br
 }
 else
 {
-/*
+
+
 $("#src_place").show();
 $('.src_place option:eq(2)').prop('selected', true);
 $("#cmdu").hide();
@@ -4810,11 +4811,13 @@ $("#to_label").show();
 
 $("#from_place").show();
 $("#to_place").show();
+$("#select_items_button").show();
+
 //$('#to_place').prop('disabled', 'disabled');
 var finalurl=redirection_url+'/content';
 var str='Copying completed. Please click   <a href='+finalurl+'>here </a>  for the new location of your content.';
 document.getElementById("frame1").contentDocument.body.innerHTML = "Note.<br><br><span id='mySpan' style='font-weight:bold;'>"+str.fontcolor("#3778C7")+"</span>";
-*/
+
 var serverMsg = "Server is stopped/down, check with the administrator.";
 document.getElementById("frame1").contentDocument.body.innerHTML = "<br><br><span id='mySpan' style='font-weight:bold;'>"+serverMsg.fontcolor("#3778C7")+"</span>";
 }	
