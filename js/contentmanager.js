@@ -4811,7 +4811,7 @@ $("#to_label").show();
 
 $("#from_place").show();
 $("#to_place").show();
-$("#select_items_button").show();
+$("#button_div").show();
 $("#copyTo").text("Copy this:");
 //$('#to_place').prop('disabled', 'disabled');
 var finalurl=redirection_url+'/content';
